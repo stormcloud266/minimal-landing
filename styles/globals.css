@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  @apply bg-gray-800 text-gray-100;
+  @apply bg-gray-800 text-gray-400;
 }
 
 *,
@@ -18,11 +18,11 @@ h3,
 h4,
 h5,
 h6 {
-  @apply font-bold text-white;
+  @apply font-bold text-white tracking-wide;
 }
 
 h1 {
-  @apply text-5xl;
+  @apply text-7xl;
 }
 
 h2 {

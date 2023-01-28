@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       maxWidth: {
-        "8xl": "90rem",
+        "8xl": "100rem",
       },
       colors: {
         accent: "orange",

@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Wrapper from "@components/ui/wrapper";
 import Section from "@components/ui/section";
+import Button from "@components/ui/button";
 
 export default function Home() {
   return (
@@ -11,11 +12,32 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Wrapper>
+
+      <div className="min-h-screen flex items-center">
         <Section>
-          <h1>HELLO</h1>
+          <Wrapper>
+            <h1 className="mb-8 max-w-4xl leading-snug">
+              Crafting Unique Digital Experiences
+            </h1>
+            <p className="text-lg max-w-4xl leading-loose">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
+              aut alias velit quis deleniti sapiente itaque nobis dolorem
+              voluptatum accusantium.
+            </p>
+
+            <div className="mt-8">
+              <Button className="mr-4" accent href="/#work">
+                See Work
+              </Button>
+              <Button href="/#contact">Contact</Button>
+            </div>
+          </Wrapper>
         </Section>
-      </Wrapper>
+      </div>
+
+      <div className="bg-gray-900">
+        <Section></Section>
+      </div>
     </>
   );
 }
