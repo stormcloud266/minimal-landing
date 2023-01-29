@@ -11,7 +11,7 @@ const Header = () => {
   return (
     <header className="py-4 absolute w-full">
       <Wrapper>
-        <div className="flex justify-between">
+        <div className="flex justify-between items-center">
           <p className="font-semibold text-lg text-white uppercase">
             <span className="text-accent">Tawnee</span>.DEV
           </p>

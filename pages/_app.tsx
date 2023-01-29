@@ -1,7 +1,8 @@
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import { Poppins } from "@next/font/google";
-import Header from "@components/header";
+import Header from "@components/layout/header";
+import Footer from "@components/layout/footer";
 
 const poppins = Poppins({ weight: ["400", "600"], subsets: ["latin"] });
 
@@ -12,6 +13,7 @@ export default function App({ Component, pageProps }: AppProps) {
       <main className={poppins.className}>
         <Component {...pageProps} />
       </main>
+      <Footer />
     </>
   );
 }
