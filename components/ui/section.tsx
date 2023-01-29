@@ -15,8 +15,8 @@ const Section = ({
   return (
     <section
       className={clsx("w-full", {
-        "pt-28": top,
-        "pb-28": bottom,
+        "pt-36": top,
+        "pb-36": bottom,
       })}
       {...rest}
     >

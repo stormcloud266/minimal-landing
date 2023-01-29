@@ -19,13 +19,13 @@ export default function Home() {
             <h1 className="mb-8 max-w-4xl leading-snug">
               Crafting Unique Digital Experiences
             </h1>
-            <p className="text-lg max-w-4xl leading-loose">
+            <p className="text-xl max-w-4xl leading-loose">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
               aut alias velit quis deleniti sapiente itaque nobis dolorem
               voluptatum accusantium.
             </p>
 
-            <div className="mt-8">
+            <div className="mt-10">
               <Button className="mr-4" accent href="/#work">
                 See Work
               </Button>
@@ -35,9 +35,70 @@ export default function Home() {
         </Section>
       </div>
 
-      <div className="bg-gray-900">
-        <Section></Section>
-      </div>
+      <Section id="about" top={false}>
+        <Wrapper>
+          <div className="max-w-prose mb-12">
+            <h2 className="text-4xl font-normal leading-normal">
+              Building web apps to smb websites with smooth user experience
+            </h2>
+          </div>
+          <div className="flex justify-between">
+            <div className="flex-1 max-w-prose">
+              <p className="mb-6">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Architecto nulla tempore laborum impedit minus omnis itaque nemo
+                quidem molestias perferendis.
+              </p>
+              <p className="mb-6">
+                Doloribus quidem repellendus reiciendis cum non consequatur
+                distinctio assumenda explicabo! Facere numquam totam vel sint
+                necessitatibus reiciendis qui consectetur aut odio omnis! Unde,
+                officia repellendus.
+              </p>
+              <p className="mb-6">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Possimus quos ab repellat corrupti nemo sequi nobis vitae
+                dolores quas!
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Possimus quos ab repellat corrupti nemo sequi nobis vitae
+                dolores quas!
+              </p>
+            </div>
+
+            <ul className="flex-1 ml-16 grid grid-cols-2 gap-4">
+              {[...Array(5).keys()].map((item) => (
+                <li
+                  key={item}
+                  className="flex text-gray-300 flex-col text-center bg-white/5 rounded-md p-5"
+                >
+                  <span className="mr-4 text-white">&rarr;</span> Lorem ipsum
+                  dolor, sit amet consectetur adipisicing elit. Explicabo,
+                  eligendi.
+                </li>
+              ))}
+            </ul>
+          </div>
+        </Wrapper>
+      </Section>
+
+      <Section id="work">
+        <Wrapper>
+          <h2 className="text-center mb-20">Recent Projects</h2>
+          <div>
+            <div>
+              <p className="text-3xl">Name of Project</p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum,
+                natus hic facilis ea consequuntur quod odit mollitia officia
+                explicabo aspernatur, accusamus odio quaerat aliquam voluptate,
+                in unde tenetur voluptatibus illo reiciendis nisi.
+              </p>
+            </div>
+          </div>
+        </Wrapper>
+      </Section>
     </>
   );
 }

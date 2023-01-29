@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  @apply bg-gray-800 text-gray-400;
+  @apply bg-gray-900 text-gray-400;
 }
 
 *,
@@ -12,13 +12,17 @@
   @apply box-border;
 }
 
+body {
+  @apply leading-relaxed text-lg;
+}
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  @apply font-bold text-white tracking-wide;
+  @apply font-semibold text-white tracking-wide;
 }
 
 h1 {
@@ -26,7 +30,7 @@ h1 {
 }
 
 h2 {
-  @apply text-4xl;
+  @apply text-6xl;
 }
 
 h3 {

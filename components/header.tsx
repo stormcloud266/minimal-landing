@@ -12,7 +12,7 @@ const Header = () => {
     <header className="py-4 absolute w-full">
       <Wrapper>
         <div className="flex justify-between">
-          <p className="font-bold text-lg text-white">
+          <p className="font-semibold text-lg text-white">
             <span className="text-accent">Minimal</span>Landing
           </p>
           <nav>
