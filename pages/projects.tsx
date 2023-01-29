@@ -84,13 +84,42 @@ const Projects = ({}: ProjectsProps) => {
                   width={1000}
                   height={570}
                   alt=""
-                  // fill
                 />
               </div>
             </div>
           </Wrapper>
         </Section>
       </div>
+
+      <Section top={false}>
+        <Wrapper>
+          <div className="flex flex-col md:flex-row justify-center">
+            <div className="basis-1/3 md:text-right pt-10 md:pt-12 lg:pt-20 pl-10 md:pl-0 md:pr-12 lg:pr-32 border-l border-gray-500 md:border-none">
+              <p className="text-lg font-semibold text-gray-500 uppercase">
+                the motivation
+              </p>
+            </div>
+
+            <div className="basis-2/3 pl-10 md:pl-12 lg:pl-32 pt-6 md:pt-12 lg:pt-20 border-l border-gray-500 max-w-4xl">
+              <h2 className="text-4xl mb-6">{projectData.motivation.title}</h2>
+              <p>{projectData.motivation.description}</p>
+            </div>
+          </div>
+
+          <div className="flex flex-col md:flex-row justify-center">
+            <div className="basis-1/3 md:text-right pt-10 md:pt-12 lg:pt-20 pl-10 md:pl-0 md:pr-12 lg:pr-32 border-l border-gray-500 md:border-none">
+              <p className="text-lg font-semibold text-gray-500 uppercase pt-8 md:pt-0">
+                the solution
+              </p>
+            </div>
+
+            <div className="basis-2/3 pl-10 md:pl-12 lg:pl-32 pb-10 pt-6 md:py-12 lg:py-20 border-l border-gray-500 max-w-4xl">
+              <h2 className="text-4xl mb-6">{projectData.solution.title}</h2>
+              <p>{projectData.solution.description}</p>
+            </div>
+          </div>
+        </Wrapper>
+      </Section>
     </>
   );
 };
