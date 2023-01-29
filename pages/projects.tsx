@@ -91,7 +91,7 @@ const Projects = ({}: ProjectsProps) => {
         </Section>
       </div>
 
-      <Section top={false}>
+      <Section top={false} bottom={false}>
         <Wrapper>
           <div className="flex flex-col md:flex-row justify-center">
             <div className="basis-1/3 md:text-right pt-10 md:pt-12 lg:pt-20 pl-10 md:pl-0 md:pr-12 lg:pr-32 border-l border-gray-500 md:border-none">
@@ -117,6 +117,51 @@ const Projects = ({}: ProjectsProps) => {
               <h2 className="text-4xl mb-6">{projectData.solution.title}</h2>
               <p>{projectData.solution.description}</p>
             </div>
+          </div>
+        </Wrapper>
+      </Section>
+
+      <Section>
+        <Wrapper>
+          <div className="flex justify-center">
+            <Image
+              src={"/assets/carteblock-multi-device-mockup.webp"}
+              width={1000}
+              height={630}
+              alt=""
+            />
+          </div>
+
+          <div className="mt-36">
+            <h2 className="mb-8">The Process</h2>
+            <div className="flex justify-between">
+              <div className="max-w-prose">
+                {projectData.process.description.map((text) => (
+                  <p key={text} className="mt-4">
+                    {text}
+                  </p>
+                ))}
+              </div>
+
+              <ul className="max-w-prose">
+                {projectData.process.bullets.map((text) => (
+                  <li key={text} className="text-gray-200 mt-4">
+                    {text}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </Wrapper>
+      </Section>
+
+      <Section>
+        <Wrapper>
+          <h2 className="text-center">The Challenges</h2>
+          <div className="grid grid-cols-2 gap-y-12 gap-x-16 mt-16 max-w-7xl mx-auto">
+            {projectData.challenges.map((text) => (
+              <p key={text}>{text}</p>
+            ))}
           </div>
         </Wrapper>
       </Section>
