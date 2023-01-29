@@ -12,8 +12,8 @@ const Header = () => {
     <header className="py-4 absolute w-full">
       <Wrapper>
         <div className="flex justify-between">
-          <p className="font-semibold text-lg text-white">
-            <span className="text-accent">Minimal</span>Landing
+          <p className="font-semibold text-lg text-white uppercase">
+            <span className="text-accent">Tawnee</span>.DEV
           </p>
           <nav>
             {links.map(({ href, text }) => (

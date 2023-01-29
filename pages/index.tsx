@@ -1,9 +1,9 @@
 import Head from "next/head";
-import Link from "next/link";
 
-import Wrapper from "@components/ui/wrapper";
-import Section from "@components/ui/section";
 import Button from "@components/ui/button";
+import Section from "@components/ui/section";
+import TextLink from "@components/ui/textLink";
+import Wrapper from "@components/ui/wrapper";
 
 import ReactIcon from "@components/icons/reactIcon";
 import StylesIcon from "@components/icons/stylesIcon";
@@ -11,6 +11,7 @@ import GitIcon from "@components/icons/gitIcon";
 import FigmaIcon from "@components/icons/figmaIcon";
 import FramerIcon from "@components/icons/framerIcon";
 import ArrowRightIcon from "@components/icons/arrowRightIcon";
+import clsx from "clsx";
 
 const iconData = [
   {
@@ -32,6 +33,33 @@ const iconData = [
   {
     icon: <FigmaIcon />,
     text: "Wire frame and prototype with Figma",
+  },
+];
+
+const projectData = [
+  {
+    name: "AABS",
+    description:
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos cupiditate laboriosam quam nesciunt voluptate consectetur exercitationem dolore labore reiciendis quis.",
+    tech: ["NextJS", "Tailwind", "Contentful"],
+  },
+  {
+    name: "Carteblock",
+    description:
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos cupiditate laboriosam quam nesciunt voluptate consectetur exercitationem dolore labore reiciendis quis.",
+    tech: ["NextJS", "Tailwind", "Contentful"],
+  },
+  {
+    name: "InsureDAO",
+    description:
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos cupiditate laboriosam quam nesciunt voluptate consectetur exercitationem dolore labore reiciendis quis.",
+    tech: ["NextJS", "Tailwind", "Contentful"],
+  },
+  {
+    name: "Cody Bookkeeping",
+    description:
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos cupiditate laboriosam quam nesciunt voluptate consectetur exercitationem dolore labore reiciendis quis.",
+    tech: ["NextJS", "Tailwind", "Contentful"],
   },
 ];
 
@@ -61,12 +89,7 @@ export default function Home() {
               <Button className="mr-12" accent href="/#work">
                 See Work
               </Button>
-              <Link
-                href="/#contact"
-                className="inline-flex items-center text-white"
-              >
-                <span className="mr-4">Contact</span> <ArrowRightIcon />
-              </Link>
+              <TextLink href="/#contact">Contact</TextLink>
             </div>
           </Wrapper>
         </Section>
@@ -109,16 +132,43 @@ export default function Home() {
 
       <Section id="work">
         <Wrapper>
-          <h2 className="text-center mb-20">Recent Projects</h2>
-          <div>
-            <div>
-              <p className="text-3xl">Name of Project</p>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum,
-                natus hic facilis ea consequuntur quod odit mollitia officia
-                explicabo aspernatur, accusamus odio quaerat aliquam voluptate,
-                in unde tenetur voluptatibus illo reiciendis nisi.
+          <h2 className="text-center mb-28">Recent Projects</h2>
+          <div className="flex justify-center flex-wrap gap-x-8 gap-y-4">
+            {projectData.map(({ name }) => (
+              <h3
+                key={name}
+                className={clsx(
+                  name === "AABS" ? "text-white" : "text-gray-500"
+                )}
+              >
+                {name}
+              </h3>
+            ))}
+          </div>
+          <div className="mt-16 flex justify-between">
+            <div className="max-w-prose">
+              <p className="text-base italic tracking-widest mb-4">
+                interesting label thing
               </p>
+              <p className="text-gray-200 mb-4">{projectData[0].description}</p>
+              <TextLink href="/#contact" accent>
+                Read More about This Project
+              </TextLink>
+            </div>
+            <div className="max-w-2x ml-24">
+              <h4 className="mb-6 text-xl">Highlights</h4>
+              <ul>
+                {[...Array(3).keys()].map((i) => (
+                  <li key={i} className="mb-8 flex">
+                    <span className="mr-4 mt-[2px] text-gray-200 ">
+                      <ArrowRightIcon />
+                    </span>{" "}
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel
+                    vitae earum recusandae repellendus itaque. Consequuntur
+                    sapiente tempora.
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         </Wrapper>
