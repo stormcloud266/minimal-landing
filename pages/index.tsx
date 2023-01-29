@@ -1,7 +1,39 @@
 import Head from "next/head";
+import Link from "next/link";
+
 import Wrapper from "@components/ui/wrapper";
 import Section from "@components/ui/section";
 import Button from "@components/ui/button";
+
+import ReactIcon from "@components/icons/reactIcon";
+import StylesIcon from "@components/icons/stylesIcon";
+import GitIcon from "@components/icons/gitIcon";
+import FigmaIcon from "@components/icons/figmaIcon";
+import FramerIcon from "@components/icons/framerIcon";
+import ArrowRightIcon from "@components/icons/arrowRightIcon";
+
+const iconData = [
+  {
+    icon: <ReactIcon />,
+    text: "Build using React and its frameworks such as Next, Redwood, Gatsby",
+  },
+  {
+    icon: <StylesIcon />,
+    text: "Style with modern CSS solutions like SCSS Modules, Tailwind, or PostCSS",
+  },
+  {
+    icon: <GitIcon />,
+    text: "Version control with Git and Github",
+  },
+  {
+    icon: <FramerIcon />,
+    text: "Animate with the Framer Motion library and CSS Keyframes",
+  },
+  {
+    icon: <FigmaIcon />,
+    text: "Wire frame and prototype with Figma",
+  },
+];
 
 export default function Home() {
   return (
@@ -26,10 +58,15 @@ export default function Home() {
             </p>
 
             <div className="mt-10">
-              <Button className="mr-4" accent href="/#work">
+              <Button className="mr-12" accent href="/#work">
                 See Work
               </Button>
-              <Button href="/#contact">Contact</Button>
+              <Link
+                href="/#contact"
+                className="inline-flex items-center text-white"
+              >
+                <span className="mr-4">Contact</span> <ArrowRightIcon />
+              </Link>
             </div>
           </Wrapper>
         </Section>
@@ -37,49 +74,36 @@ export default function Home() {
 
       <Section id="about" top={false}>
         <Wrapper>
-          <div className="max-w-prose mb-12">
-            <h2 className="text-4xl font-normal leading-normal">
-              Building web apps to smb websites with smooth user experience
-            </h2>
-          </div>
           <div className="flex justify-between">
-            <div className="flex-1 max-w-prose">
-              <p className="mb-6">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Architecto nulla tempore laborum impedit minus omnis itaque nemo
-                quidem molestias perferendis.
-              </p>
-              <p className="mb-6">
-                Doloribus quidem repellendus reiciendis cum non consequatur
-                distinctio assumenda explicabo! Facere numquam totam vel sint
-                necessitatibus reiciendis qui consectetur aut odio omnis! Unde,
-                officia repellendus.
-              </p>
-              <p className="mb-6">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Possimus quos ab repellat corrupti nemo sequi nobis vitae
-                dolores quas!
-              </p>
+            <div className="flex-1 max-w-2xl">
+              <h2 className="text-4xl font-normal leading-normal ">
+                Building web apps to smb websites with smooth user experience
+              </h2>
+            </div>
+            <div className="flex-1 max-w-2xl ml-16 mt-2">
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 Possimus quos ab repellat corrupti nemo sequi nobis vitae
                 dolores quas!
               </p>
             </div>
-
-            <ul className="flex-1 ml-16 grid grid-cols-2 gap-4">
-              {[...Array(5).keys()].map((item) => (
-                <li
-                  key={item}
-                  className="flex text-gray-300 flex-col text-center bg-white/5 rounded-md p-5"
-                >
-                  <span className="mr-4 text-white">&rarr;</span> Lorem ipsum
-                  dolor, sit amet consectetur adipisicing elit. Explicabo,
-                  eligendi.
-                </li>
-              ))}
-            </ul>
+            <div className="flex-1 max-w-2xl ml-10 mt-2">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Possimus quos ab repellat corrupti nemo sequi nobis vitae
+                dolores quas!
+              </p>
+            </div>
           </div>
+
+          <ul className="mt-32 flex gap-8">
+            {iconData.map(({ icon, text }, i) => (
+              <li key={i} className="flex-1 flex text-gray-200 flex-col">
+                <span className="mr-4 mb-4 text-gray-600">{icon}</span>
+                {text}
+              </li>
+            ))}
+          </ul>
         </Wrapper>
       </Section>
 
