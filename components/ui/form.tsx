@@ -14,7 +14,7 @@ const Form = () => {
             type="text"
             id="name"
             name="Name"
-            className="bg-gray-200/10 py-2 px-4 text-white rounded-sm"
+            className="bg-gray-700 py-2 px-4 text-white rounded-sm"
           />
         </div>
 
@@ -26,7 +26,7 @@ const Form = () => {
             type="text"
             id="email"
             name="Email"
-            className="bg-gray-200/10 py-2 px-4 text-white rounded-sm"
+            className="bg-gray-700 py-2 px-4 text-white rounded-sm"
           />
         </div>
       </div>
@@ -38,7 +38,7 @@ const Form = () => {
         <textarea
           name="Message"
           id="message"
-          className="bg-gray-200/10 py-2 px-4 text-white rounded-sm h-24 resize-none"
+          className="bg-gray-700 py-2 px-4 text-white rounded-sm h-24 resize-none"
         />
       </div>
 

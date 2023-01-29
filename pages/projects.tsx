@@ -6,6 +6,8 @@ import Section from "@components/ui/section";
 import Wrapper from "@components/ui/wrapper";
 import TextLink from "@components/ui/textLink";
 import Tag from "@components/ui/tag";
+import AngleRightIcon from "@components/icons/angleRightIcon";
+import CheckIcon from "@components/icons/checkIcon";
 
 interface ProjectsProps {}
 
@@ -145,7 +147,13 @@ const Projects = ({}: ProjectsProps) => {
 
               <ul className="max-w-prose">
                 {projectData.process.bullets.map((text) => (
-                  <li key={text} className="text-gray-200 mt-4">
+                  <li
+                    key={text}
+                    className="text-gray-200 mt-6 flex items-start"
+                  >
+                    <span className="mr-4 mt-1 text-gray-300 block bg-gray-700 rounded">
+                      <AngleRightIcon />
+                    </span>
                     {text}
                   </li>
                 ))}
@@ -160,7 +168,12 @@ const Projects = ({}: ProjectsProps) => {
           <h2 className="text-center">The Challenges</h2>
           <div className="grid grid-cols-2 gap-y-12 gap-x-16 mt-16 max-w-7xl mx-auto">
             {projectData.challenges.map((text) => (
-              <p key={text}>{text}</p>
+              <p key={text} className="flex items-start">
+                <span className="mr-4 mt-2 text-gray-300 block bg-gray-700 rounded">
+                  <CheckIcon />
+                </span>
+                {text}
+              </p>
             ))}
           </div>
         </Wrapper>

@@ -36,7 +36,7 @@ const Contact = ({}: ContactProps) => {
                   href={href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block bg-gray-600 p-1 rounded-sm text-gray-200 transition-all hover:bg-accent hover:text-gray-1000"
+                  className="inline-block bg-gray-700 p-1 rounded-sm text-gray-200 transition-all hover:bg-accent hover:text-gray-1000"
                   aria-label={label}
                 >
                   {icon}

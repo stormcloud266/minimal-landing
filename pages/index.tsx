@@ -12,7 +12,7 @@ import StylesIcon from "@components/icons/stylesIcon";
 import GitIcon from "@components/icons/gitIcon";
 import FigmaIcon from "@components/icons/figmaIcon";
 import FramerIcon from "@components/icons/framerIcon";
-import ArrowRightIcon from "@components/icons/arrowRightIcon";
+import AngleRightIcon from "@components/icons/angleRightIcon";
 
 const iconData = [
   {
@@ -165,13 +165,15 @@ export default function Home() {
               <h4 className="mb-6 text-xl">Highlights</h4>
               <ul>
                 {[1, 2, 3].map((i) => (
-                  <li key={i} className="mb-8 flex">
-                    <span className="mr-4 mt-[2px] text-gray-200 ">
-                      <ArrowRightIcon />
+                  <li key={i} className="mb-8 flex items-start">
+                    <span className="mr-4 mt-2 text-gray-300 block bg-gray-700 rounded">
+                      <AngleRightIcon />
                     </span>{" "}
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel
-                    vitae earum recusandae repellendus itaque. Consequuntur
-                    sapiente tempora.
+                    <span>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Vel vitae earum recusandae repellendus itaque.
+                      Consequuntur sapiente tempora.
+                    </span>
                   </li>
                 ))}
               </ul>
