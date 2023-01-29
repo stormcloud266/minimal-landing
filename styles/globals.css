@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 html {
-  @apply bg-[#08090b] text-gray-400;
+  @apply bg-gray-1000 text-gray-400;
 }
 
 *,

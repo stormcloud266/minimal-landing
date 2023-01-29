@@ -104,6 +104,11 @@ export default function Home() {
               </h2>
             </div>
             <div className="flex-1 max-w-2xl ml-16 mt-2">
+              <p className="mb-6">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Possimus quos ab repellat corrupti nemo sequi nobis vitae
+                dolores quas!
+              </p>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 Possimus quos ab repellat corrupti nemo sequi nobis vitae
@@ -111,6 +116,11 @@ export default function Home() {
               </p>
             </div>
             <div className="flex-1 max-w-2xl ml-10 mt-2">
+              <p className="mb-6">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Possimus quos ab repellat corrupti nemo sequi nobis vitae
+                dolores quas!
+              </p>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 Possimus quos ab repellat corrupti nemo sequi nobis vitae

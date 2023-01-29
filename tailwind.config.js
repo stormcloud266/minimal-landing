@@ -8,6 +8,7 @@ module.exports = {
       },
       colors: {
         accent: "orange",
+        "gray-1000": "#08090b",
       },
     },
   },
