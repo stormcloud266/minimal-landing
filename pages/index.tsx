@@ -99,7 +99,7 @@ export default function Home() {
         <Wrapper>
           <div className="flex justify-between">
             <div className="flex-1 max-w-2xl">
-              <h2 className="text-4xl font-normal leading-normal ">
+              <h2 className="text-4xl font-light leading-normal ">
                 Building web apps to smb websites with smooth user experience
               </h2>
             </div>
