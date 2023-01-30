@@ -36,3 +36,13 @@ h2 {
 h3 {
   @apply text-3xl;
 }
+
+@layer components {
+  .arrow-link svg {
+    transition: transform 0.15s;
+  }
+
+  .arrow-link:hover svg {
+    transform: translateX(6px);
+  }
+}

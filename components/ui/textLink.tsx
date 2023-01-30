@@ -13,8 +13,8 @@ const TextLink = ({ children, href, accent }: LinkProps) => {
     <Link
       href={href}
       className={clsx(
-        "inline-flex items-center",
-        accent ? "text-accent" : "text-white"
+        "arrow-link inline-flex items-center transition-colors",
+        accent ? "text-accent hover:text-white" : "text-white hover:text-accent"
       )}
     >
       <span className="mr-4">{children}</span> <ArrowRightIcon />

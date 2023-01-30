@@ -12,15 +12,18 @@ const Header = () => {
     <header className="py-4 absolute w-full">
       <Wrapper noBreak>
         <div className="flex justify-between items-center">
-          <p className="font-semibold text-lg text-white uppercase">
+          <Link
+            href="/"
+            className="font-semibold text-lg text-white uppercase hover:opacity-80 transition-opacity"
+          >
             <span className="text-accent">Tawnee</span>.DEV
-          </p>
+          </Link>
           <nav>
             {links.map(({ href, text }) => (
               <Link
                 href={href}
                 key={href}
-                className="pl-8 uppercase text-sm tracking-wider"
+                className="pl-8 uppercase text-sm tracking-wider transition-colors hover:text-accent"
               >
                 {text}
               </Link>
