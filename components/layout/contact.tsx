@@ -18,11 +18,11 @@ const Contact = ({}: ContactProps) => {
     <Section>
       <Wrapper>
         <h2 className="mb-16 text-center">Let&apos;s Connect</h2>
-        <div className="flex">
+        <div className="flex flex-col-reverse md:flex-row gap-16 md:gap-8 lg:gap-16">
           <div className="flex-1">
             <Form />
           </div>
-          <div className="flex-1 max-w-prose ml-16 mt-6 ">
+          <div className="flex-1 max-w-prose md:mt-6">
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
               ullam iusto perspiciatis dolores. Sed ipsum reiciendis vero dolor

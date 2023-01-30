@@ -75,7 +75,7 @@ export default function Home() {
             <h1 className="mb-8 max-w-4xl leading-snug">
               Crafting Unique Digital Experiences
             </h1>
-            <p className="text-xl max-w-4xl leading-loose">
+            <p className="text-xl max-w-4xl leading-relaxed">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
               aut alias velit quis deleniti sapiente itaque nobis dolorem
               voluptatum accusantium.
@@ -93,13 +93,13 @@ export default function Home() {
 
       <Section id="about" top={false}>
         <Wrapper>
-          <div className="flex justify-between">
-            <div className="flex-1 max-w-2xl">
-              <h2 className="text-4xl font-light leading-normal ">
+          <div className="flex flex-col gap-6 lg:flex-row justify-between max-w-xl lg:max-w-none mx-auto">
+            <div className="flex-1">
+              <h2 className="text-4xl font-light leading-normal mb-4 lg:mb-0">
                 Building web apps to smb websites with smooth user experience
               </h2>
             </div>
-            <div className="flex-1 max-w-2xl ml-16 mt-2">
+            <div className="flex-1 max-w-2xl lg:ml-6 lg:mt-2">
               <p className="mb-6">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 Possimus quos ab repellat corrupti nemo sequi nobis vitae
@@ -111,7 +111,7 @@ export default function Home() {
                 dolores quas!
               </p>
             </div>
-            <div className="flex-1 max-w-2xl ml-10 mt-2">
+            <div className="flex-1 max-w-2xl lg:mt-2">
               <p className="mb-6">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 Possimus quos ab repellat corrupti nemo sequi nobis vitae
@@ -125,7 +125,7 @@ export default function Home() {
             </div>
           </div>
 
-          <ul className="mt-32 flex gap-8">
+          <ul className="mt-32 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
             {iconData.map(({ icon, text }, i) => (
               <li key={i} className="flex-1 flex text-gray-200 flex-col">
                 <span className="mr-4 mb-4 text-gray-600">{icon}</span>
@@ -151,7 +151,7 @@ export default function Home() {
               </h3>
             ))}
           </div>
-          <div className="mt-16 flex justify-between">
+          <div className="mt-16 flex flex-col md:flex-row gap-16 lg:gap-24 justify-between">
             <div className="max-w-prose">
               <p className="text-base italic tracking-widest mb-4">
                 interesting label thing
@@ -161,7 +161,7 @@ export default function Home() {
                 Read More about This Project
               </TextLink>
             </div>
-            <div className="max-w-2x ml-24">
+            <div className="max-w-2x">
               <h4 className="mb-6 text-xl">Highlights</h4>
               <ul>
                 {[1, 2, 3].map((i) => (

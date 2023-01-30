@@ -1,9 +1,21 @@
+import clsx from "clsx";
 import { PropsWithChildren } from "react";
 
-interface WrapperProps extends PropsWithChildren {}
+interface WrapperProps extends PropsWithChildren {
+  noBreak?: boolean;
+}
 
-const Wrapper = ({ children }: WrapperProps) => {
-  return <div className="w-full max-w-8xl px-4 mx-auto">{children}</div>;
+const Wrapper = ({ children, noBreak }: WrapperProps) => {
+  return (
+    <div
+      className={clsx(
+        "w-full  px-4 mx-auto",
+        noBreak ? "max-w-8xl" : "max-w-xl md:max-w-8xl"
+      )}
+    >
+      {children}
+    </div>
+  );
 };
 
 export default Wrapper;

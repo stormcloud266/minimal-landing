@@ -7,7 +7,7 @@ module.exports = {
         "8xl": "100rem",
       },
       colors: {
-        accent: "skyblue",
+        accent: "coral",
         "gray-1000": "#08090b",
       },
     },

@@ -60,7 +60,7 @@ const Projects = ({}: ProjectsProps) => {
       <div className="min-h-screen flex items-center">
         <Section>
           <Wrapper>
-            <div className="flex">
+            <div className="flex flex-col lg:flex-row gap-16 max-w-xl lg:max-w-none mx-auto">
               <div className="flex-1">
                 <h1 className="mb-8 max-w-4xl leading-snug">
                   {projectData.title}
@@ -70,7 +70,7 @@ const Projects = ({}: ProjectsProps) => {
                     <Tag key={text}>{text}</Tag>
                   ))}
                 </div>
-                <p className="text-xl max-w-4xl leading-loose">
+                <p className="text-xl max-w-4xl leading-relaxed">
                   {projectData.intro}
                 </p>
                 <div className="mt-10">
@@ -103,7 +103,9 @@ const Projects = ({}: ProjectsProps) => {
             </div>
 
             <div className="basis-2/3 pl-10 md:pl-12 lg:pl-32 pt-6 md:pt-12 lg:pt-20 border-l border-gray-500 max-w-4xl">
-              <h2 className="text-4xl mb-6">{projectData.motivation.title}</h2>
+              <h2 className="text-4xl mb-6 font-light leading-normal">
+                {projectData.motivation.title}
+              </h2>
               <p>{projectData.motivation.description}</p>
             </div>
           </div>
@@ -116,7 +118,9 @@ const Projects = ({}: ProjectsProps) => {
             </div>
 
             <div className="basis-2/3 pl-10 md:pl-12 lg:pl-32 pb-10 pt-6 md:py-12 lg:py-20 border-l border-gray-500 max-w-4xl">
-              <h2 className="text-4xl mb-6">{projectData.solution.title}</h2>
+              <h2 className="text-4xl mb-6 font-light leading-normal">
+                {projectData.solution.title}
+              </h2>
               <p>{projectData.solution.description}</p>
             </div>
           </div>
@@ -136,7 +140,7 @@ const Projects = ({}: ProjectsProps) => {
 
           <div className="mt-36">
             <h2 className="mb-8">The Process</h2>
-            <div className="flex justify-between">
+            <div className="flex flex-col md:flex-row gap-16 justify-between">
               <div className="max-w-prose">
                 {projectData.process.description.map((text) => (
                   <p key={text} className="mt-4">
@@ -166,7 +170,7 @@ const Projects = ({}: ProjectsProps) => {
       <Section>
         <Wrapper>
           <h2 className="text-center">The Challenges</h2>
-          <div className="grid grid-cols-2 gap-y-12 gap-x-16 mt-16 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-y-12 gap-x-16 mt-16 md:max-w-7xl mx-auto">
             {projectData.challenges.map((text) => (
               <p key={text} className="flex items-start">
                 <span className="mr-4 mt-2 text-gray-300 block bg-gray-700 rounded">
