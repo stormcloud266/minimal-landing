@@ -7,6 +7,8 @@ import Section from "@components/ui/section";
 import TextLink from "@components/ui/textLink";
 import Wrapper from "@components/ui/wrapper";
 
+import Fade from "@components/animations/fade";
+
 import ReactIcon from "@components/icons/reactIcon";
 import StylesIcon from "@components/icons/stylesIcon";
 import GitIcon from "@components/icons/gitIcon";
@@ -72,20 +74,29 @@ export default function Home() {
       <div className="min-h-screen flex items-center">
         <Section>
           <Wrapper>
-            <h1 className="mb-8 max-w-4xl leading-snug">
-              Crafting Unique Digital Experiences
-            </h1>
-            <p className="text-xl max-w-4xl leading-relaxed">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
-              aut alias velit quis deleniti sapiente itaque nobis dolorem
-              voluptatum accusantium.
-            </p>
+            <Fade duration={0.8}>
+              <h1 className="mb-8 max-w-4xl leading-snug">
+                Crafting Unique Digital Experiences
+              </h1>
+            </Fade>
+
+            <Fade delay={0.2}>
+              <p className="text-xl max-w-4xl leading-relaxed">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
+                aut alias velit quis deleniti sapiente itaque nobis dolorem
+                voluptatum accusantium.
+              </p>
+            </Fade>
 
             <div className="mt-10">
-              <Button className="mr-12" accent href="/#work">
-                See Work
-              </Button>
-              <TextLink href="/#contact">Contact</TextLink>
+              <Fade inline delay={0.4} x={-5}>
+                <Button className="mr-12" accent href="/#work">
+                  See Work
+                </Button>
+              </Fade>
+              <Fade inline delay={0.5} x={-5}>
+                <TextLink href="/#contact">Contact</TextLink>
+              </Fade>
             </div>
           </Wrapper>
         </Section>
@@ -95,44 +106,56 @@ export default function Home() {
         <Wrapper>
           <div className="flex flex-col gap-6 lg:flex-row justify-between max-w-xl lg:max-w-none mx-auto">
             <div className="flex-1">
-              <h2 className="text-4xl font-light leading-normal mb-4 lg:mb-0">
-                Building web apps to smb websites with smooth user experience
-              </h2>
+              <Fade>
+                <h2 className="text-4xl font-light leading-normal mb-4 lg:mb-0">
+                  Building web apps to smb websites with smooth user experience
+                </h2>
+              </Fade>
             </div>
             <div className="flex-1 max-w-2xl lg:ml-6 lg:mt-2">
-              <p className="mb-6">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Possimus quos ab repellat corrupti nemo sequi nobis vitae
-                dolores quas!
-              </p>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Possimus quos ab repellat corrupti nemo sequi nobis vitae
-                dolores quas!
-              </p>
+              <Fade inline>
+                <p className="mb-6">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Possimus quos ab repellat corrupti nemo sequi nobis vitae
+                  dolores quas!
+                </p>
+              </Fade>
+              <Fade inline>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Possimus quos ab repellat corrupti nemo sequi nobis vitae
+                  dolores quas!
+                </p>
+              </Fade>
             </div>
             <div className="flex-1 max-w-2xl lg:mt-2">
-              <p className="mb-6">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Possimus quos ab repellat corrupti nemo sequi nobis vitae
-                dolores quas!
-              </p>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Possimus quos ab repellat corrupti nemo sequi nobis vitae
-                dolores quas!
-              </p>
+              <Fade inline>
+                <p className="mb-6">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Possimus quos ab repellat corrupti nemo sequi nobis vitae
+                  dolores quas!
+                </p>
+              </Fade>
+              <Fade inline>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Possimus quos ab repellat corrupti nemo sequi nobis vitae
+                  dolores quas!
+                </p>
+              </Fade>
             </div>
           </div>
 
-          <ul className="mt-32 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
-            {iconData.map(({ icon, text }, i) => (
-              <li key={i} className="flex-1 flex text-gray-200 flex-col">
-                <span className="mr-4 mb-4 text-gray-600">{icon}</span>
-                {text}
-              </li>
-            ))}
-          </ul>
+          <Fade>
+            <ul className="mt-32 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+              {iconData.map(({ icon, text }, i) => (
+                <li key={i} className="flex-1 flex text-gray-200 flex-col">
+                  <span className="mr-4 mb-4 text-gray-600">{icon}</span>
+                  {text}
+                </li>
+              ))}
+            </ul>
+          </Fade>
         </Wrapper>
       </Section>
 
