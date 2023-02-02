@@ -8,6 +8,7 @@ import TextLink from "@components/ui/textLink";
 import Tag from "@components/ui/tag";
 import AngleRightIcon from "@components/icons/angleRightIcon";
 import CheckIcon from "@components/icons/checkIcon";
+import Fade from "@components/animations/fade";
 
 interface ProjectsProps {}
 
@@ -62,31 +63,41 @@ const Projects = ({}: ProjectsProps) => {
           <Wrapper>
             <div className="flex flex-col lg:flex-row gap-16 max-w-xl lg:max-w-none mx-auto">
               <div className="flex-1">
-                <h1 className="mb-8 max-w-4xl leading-snug">
-                  {projectData.title}
-                </h1>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {projectData.tags.map((text) => (
-                    <Tag key={text}>{text}</Tag>
-                  ))}
-                </div>
-                <p className="text-xl max-w-4xl leading-relaxed">
-                  {projectData.intro}
-                </p>
+                <Fade duration={0.8}>
+                  <h1 className="mb-8 max-w-4xl leading-snug">
+                    {projectData.title}
+                  </h1>
+                </Fade>
+                <Fade delay={0.2}>
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {projectData.tags.map((text) => (
+                      <Tag key={text}>{text}</Tag>
+                    ))}
+                  </div>
+                  <p className="text-xl max-w-4xl leading-relaxed">
+                    {projectData.intro}
+                  </p>
+                </Fade>
                 <div className="mt-10">
-                  <Button className="mr-12" accent href="/#work">
-                    Visit Live Site
-                  </Button>
-                  <TextLink href="/#contact">See the Code</TextLink>
+                  <Fade inline delay={0.4} x={-5}>
+                    <Button className="mr-12" accent href="/#work">
+                      Visit Live Site
+                    </Button>
+                  </Fade>
+                  <Fade inline delay={0.5} x={-5}>
+                    <TextLink href="/#contact">See the Code</TextLink>
+                  </Fade>
                 </div>
               </div>
               <div className="relative flex-1">
-                <Image
-                  src={"/assets/carteblock-hero.webp"}
-                  width={1000}
-                  height={570}
-                  alt=""
-                />
+                <Fade delay={0.2} y={10}>
+                  <Image
+                    src={"/assets/carteblock-hero.webp"}
+                    width={1000}
+                    height={570}
+                    alt=""
+                  />
+                </Fade>
               </div>
             </div>
           </Wrapper>
@@ -129,14 +140,16 @@ const Projects = ({}: ProjectsProps) => {
 
       <Section>
         <Wrapper>
-          <div className="flex justify-center">
-            <Image
-              src={"/assets/carteblock-multi-device-mockup.webp"}
-              width={1000}
-              height={630}
-              alt=""
-            />
-          </div>
+          <Fade y={10} duration={0.8}>
+            <div className="flex justify-center">
+              <Image
+                src={"/assets/carteblock-multi-device-mockup.webp"}
+                width={1000}
+                height={630}
+                alt=""
+              />
+            </div>
+          </Fade>
 
           <div className="mt-36">
             <h2 className="mb-8">The Process</h2>
