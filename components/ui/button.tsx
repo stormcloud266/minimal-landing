@@ -20,7 +20,7 @@ const Button = ({
 }: ButtonProps) => {
   const commonProps = {
     className: clsx(
-      " inline-block px-10 py-2 rounded-sm",
+      "inline-block px-10 py-2 rounded-sm border border-gray-1000 transition hover:border-accent hover:bg-gray-1000 hover:text-accent",
       accent ? "bg-accent text-gray-1000" : "bg-white/5 text-white",
       className
     ),

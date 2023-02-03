@@ -108,31 +108,43 @@ const Projects = ({}: ProjectsProps) => {
         <Wrapper>
           <div className="flex flex-col md:flex-row justify-center">
             <div className="basis-1/4 md:text-right pt-12 md:pt-12 lg:pt-20 pl-10 md:pl-0 md:pr-12 lg:pr-32 border-l border-gray-500 md:border-none">
-              <p className="text-lg font-semibold text-gray-500 uppercase tracking-wider leading-loose">
-                the motivation
-              </p>
+              <Fade x={-10}>
+                <p className="text-lg font-semibold text-gray-500 uppercase tracking-wider leading-loose">
+                  the motivation
+                </p>
+              </Fade>
             </div>
 
             <div className="basis-3/4 pl-10 md:pl-12 lg:pl-32 pt-6 md:pt-12 lg:pt-20 border-l border-gray-500 max-w-4xl">
-              <h2 className="text-4xl mb-6 font-light leading-normal">
-                {projectData.motivation.title}
-              </h2>
-              <p>{projectData.motivation.description}</p>
+              <Fade>
+                <h2 className="text-4xl mb-6 font-light leading-normal">
+                  {projectData.motivation.title}
+                </h2>
+              </Fade>
+              <Fade delay={0.2}>
+                <p>{projectData.motivation.description}</p>
+              </Fade>
             </div>
           </div>
 
           <div className="flex flex-col md:flex-row justify-center">
             <div className="basis-1/4 md:text-right pt-10 md:pt-12 lg:pt-20 pl-10 md:pl-0 md:pr-12 lg:pr-32 border-l border-gray-500 md:border-none">
-              <p className="text-lg font-semibold text-gray-500 uppercase pt-8 md:pt-0 tracking-wider leading-loose">
-                the solution
-              </p>
+              <Fade x={-10}>
+                <p className="text-lg font-semibold text-gray-500 uppercase pt-8 md:pt-0 tracking-wider leading-loose">
+                  the solution
+                </p>
+              </Fade>
             </div>
 
             <div className="basis-3/4 pl-10 md:pl-12 lg:pl-32 pb-10 pt-6 md:py-12 lg:py-20 border-l border-gray-500 max-w-4xl">
-              <h2 className="text-4xl mb-6 font-light leading-normal">
-                {projectData.solution.title}
-              </h2>
-              <p>{projectData.solution.description}</p>
+              <Fade>
+                <h2 className="text-4xl mb-6 font-light leading-normal">
+                  {projectData.solution.title}
+                </h2>
+              </Fade>
+              <Fade delay={0.2}>
+                <p>{projectData.solution.description}</p>
+              </Fade>
             </div>
           </div>
         </Wrapper>
@@ -152,12 +164,14 @@ const Projects = ({}: ProjectsProps) => {
           </Fade>
 
           <div className="mt-36">
-            <h2 className="mb-8">The Process</h2>
+            <Fade>
+              <h2 className="mb-8">The Process</h2>
+            </Fade>
             <div className="flex flex-col md:flex-row gap-16 justify-between">
               <div className="max-w-prose">
                 {projectData.process.description.map((text) => (
                   <p key={text} className="mt-4">
-                    {text}
+                    <Fade inline>{text}</Fade>
                   </p>
                 ))}
               </div>
@@ -182,15 +196,19 @@ const Projects = ({}: ProjectsProps) => {
 
       <Section>
         <Wrapper>
-          <h2 className="text-center">The Challenges</h2>
+          <Fade>
+            <h2 className="text-center">The Challenges</h2>
+          </Fade>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-y-12 gap-x-16 mt-16 md:max-w-7xl mx-auto">
             {projectData.challenges.map((text) => (
-              <p key={text} className="flex items-start">
-                <span className="mr-4 mt-2 text-gray-300 block bg-gray-700 rounded">
-                  <CheckIcon />
-                </span>
-                {text}
-              </p>
+              <Fade key={text}>
+                <p className="flex items-start">
+                  <span className="mr-4 mt-2 text-gray-300 block bg-gray-700 rounded">
+                    <CheckIcon />
+                  </span>
+                  {text}
+                </p>
+              </Fade>
             ))}
           </div>
         </Wrapper>
