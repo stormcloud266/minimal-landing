@@ -45,4 +45,12 @@ h3 {
   .arrow-link:hover svg {
     transform: translateX(6px);
   }
+
+  .button-hover {
+    box-shadow: 0 0 0;
+  }
+
+  .button-hover:hover {
+    box-shadow: 2px 2px 0;
+  }
 }
