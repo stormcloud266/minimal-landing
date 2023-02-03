@@ -1,4 +1,5 @@
 import clsx from "clsx";
+import { m as motion } from "framer-motion";
 
 import Seo from "@components/layout/seo";
 
@@ -15,6 +16,7 @@ import GitIcon from "@components/icons/gitIcon";
 import FigmaIcon from "@components/icons/figmaIcon";
 import FramerIcon from "@components/icons/framerIcon";
 import AngleRightIcon from "@components/icons/angleRightIcon";
+import { useState } from "react";
 
 const iconData = [
   {
@@ -42,31 +44,52 @@ const iconData = [
 const projectData = [
   {
     name: "AABS",
+    label: "interesting label thing",
     description:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos cupiditate laboriosam quam nesciunt voluptate consectetur exercitationem dolore labore reiciendis quis.",
-    tech: ["NextJS", "Tailwind", "Contentful"],
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos cupiditate laboriosam quam nesciunt voluptate consectetur exercitationem.",
+    highlights: [
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, reprehenderit!",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores optio blanditiis tenetur.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    ],
   },
   {
     name: "Carteblock",
+    label: "cool tech and design stuff",
     description:
       "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos cupiditate laboriosam quam nesciunt voluptate consectetur exercitationem dolore labore reiciendis quis.",
-    tech: ["NextJS", "Tailwind", "Contentful"],
+    highlights: [
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam!",
+      "Lorem ipsum. Asperiores optio blanditiis tenetur.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. e",
+    ],
   },
   {
     name: "InsureDAO",
+    label: "web3 landing page modern and sleek",
     description:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos cupiditate laboriosam quam nesciunt voluptate consectetur exercitationem dolore labore reiciendis quis.",
-    tech: ["NextJS", "Tailwind", "Contentful"],
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos cupiditate laboriosam quam nesciunt voluptate consectetur exercitationem dolore labore reiciendis quis. Quos cupiditate laboriosam quam nesciunt voluptate consectetur exercitationem dolore labore reiciendis quis.",
+    highlights: [
+      "Lorem ipsum dolor Totam, reprehenderit!",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit.  blanditiis tenetur.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. t",
+    ],
   },
   {
     name: "Cody Bookkeeping",
+    label: "small business website",
     description:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos cupiditate laboriosam quam nesciunt voluptate consectetur exercitationem dolore labore reiciendis quis.",
-    tech: ["NextJS", "Tailwind", "Contentful"],
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos cupiditate laboriosam quam nesciunt voluptate consectetur exercitationem dolore labore reiciendis quis. Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
+    highlights: [
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, reprehenderit!",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores optio blanditiis tenetur.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. j",
+    ],
   },
 ];
 
 export default function Home() {
+  const [index, setIndex] = useState(0);
   return (
     <>
       <Seo />
@@ -161,47 +184,66 @@ export default function Home() {
 
       <Section id="work">
         <Wrapper>
-          <h2 className="text-center mb-28">Recent Projects</h2>
-          <div className="flex justify-center flex-wrap gap-x-8 gap-y-4">
-            {projectData.map(({ name }) => (
-              <h3
-                key={name}
-                className={clsx(
-                  name === "AABS" ? "text-white" : "text-gray-500"
-                )}
-              >
-                {name}
-              </h3>
-            ))}
-          </div>
-          <div className="mt-16 flex flex-col md:flex-row gap-16 lg:gap-24 justify-between">
-            <div className="max-w-prose">
-              <p className="text-base italic tracking-widest mb-4">
-                interesting label thing
-              </p>
-              <p className="text-gray-200 mb-4">{projectData[0].description}</p>
-              <TextLink href="/#contact" accent>
-                Read More about This Project
-              </TextLink>
+          <motion.div layout>
+            <h2 className="text-center mb-28">Recent Projects</h2>
+            <div className="flex justify-center flex-wrap gap-x-8 gap-y-4">
+              {projectData.map(({ name }, i) => (
+                <button
+                  key={name}
+                  onClick={() => setIndex(i)}
+                  className={clsx(
+                    "transition-colors",
+                    i === index
+                      ? "text-white"
+                      : "text-gray-500 hover:text-gray-300"
+                  )}
+                >
+                  <h3 className="text-current">{name}</h3>
+                </button>
+              ))}
             </div>
-            <div className="max-w-2x">
-              <h4 className="mb-6 text-xl">Highlights</h4>
-              <ul>
-                {[1, 2, 3].map((i) => (
-                  <li key={i} className="mb-8 flex items-start">
-                    <span className="mr-4 mt-2 text-gray-300 block bg-gray-700 rounded">
-                      <AngleRightIcon />
-                    </span>{" "}
-                    <span>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Vel vitae earum recusandae repellendus itaque.
-                      Consequuntur sapiente tempora.
-                    </span>
-                  </li>
-                ))}
-              </ul>
+            <div className="mt-16 flex flex-col md:flex-row gap-16 lg:gap-36">
+              <div className="max-w-prose flex-1">
+                <motion.p
+                  key={projectData[index].label}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  className="text-base italic tracking-widest mb-4"
+                >
+                  {projectData[index].label}
+                </motion.p>
+                <motion.p
+                  key={projectData[index].description}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  className="text-gray-200 mb-4"
+                >
+                  {projectData[index].description}
+                </motion.p>
+                <TextLink href="/#contact" accent>
+                  Read More about This Project
+                </TextLink>
+              </div>
+              <div className="max-w-2x flex-1">
+                <h4 className="mb-6 text-xl">Highlights</h4>
+                <ul>
+                  {projectData[index].highlights.map((text, i) => (
+                    <motion.li
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      key={text + i}
+                      className="mb-8 flex items-start"
+                    >
+                      <span className="mr-4 mt-2 text-gray-300 block bg-gray-700 rounded">
+                        <AngleRightIcon />
+                      </span>{" "}
+                      <span>{text}</span>
+                    </motion.li>
+                  ))}
+                </ul>
+              </div>
             </div>
-          </div>
+          </motion.div>
         </Wrapper>
       </Section>
     </>
