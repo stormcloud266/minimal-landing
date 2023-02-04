@@ -27,13 +27,17 @@ const Contact = ({}: ContactProps) => {
               <Form />
             </div>
             <div className="flex-1 max-w-prose md:mt-6">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Pariatur ullam iusto perspiciatis dolores. Sed ipsum reiciendis
-                vero dolor fuga iste placeat? Fuga placeat assumenda tenetur hic
-                amet fugit provident dolores.
+              <p className="mb-6">
+                While I am not actively seeking new job opportunities at the
+                moment, I am always open to connecting with like-minded
+                individuals in the tech community.
               </p>
-              <div className="flex gap-4 mt-4">
+              <p className="mb-4">
+                Whether you have questions about my work or simply want to
+                connect and network, feel free to reach out to me. I would be
+                happy to hear from you.
+              </p>
+              <div className="flex gap-4">
                 {socialData.map(({ icon, label, href }) => (
                   <a
                     key={label}

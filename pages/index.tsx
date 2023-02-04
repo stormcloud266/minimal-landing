@@ -21,23 +21,23 @@ import { useState } from "react";
 const iconData = [
   {
     icon: <ReactIcon />,
-    text: "Build using React and its frameworks such as Next, Redwood, Gatsby",
+    text: "React for building dynamic web apps and enhanced static sites and blogs",
   },
   {
     icon: <StylesIcon />,
-    text: "Style with modern CSS solutions like SCSS Modules, Tailwind, or PostCSS",
+    text: "SCSS modules or Tailwind for maintainable, modern styling",
   },
   {
     icon: <GitIcon />,
-    text: "Version control with Git and Github",
+    text: "Git and Github for version control and seamless collaboration",
   },
   {
     icon: <FramerIcon />,
-    text: "Animate with the Framer Motion library and CSS Keyframes",
+    text: "Framer Motion for smooth animations and an elevated user experience",
   },
   {
     icon: <FigmaIcon />,
-    text: "Wire frame and prototype with Figma",
+    text: "Figma for design collaboration and prototyping",
   },
 ];
 
@@ -98,23 +98,23 @@ export default function Home() {
         <Section>
           <Wrapper>
             <Fade duration={0.8}>
-              <h1 className="mb-8 max-w-4xl leading-snug">
-                Crafting Unique Digital Experiences
+              <h1 className="mb-8 max-w-6xl leading-snug">
+                Crafting Engaging Digital Experiences
               </h1>
             </Fade>
 
             <Fade delay={0.2}>
               <p className="text-xl max-w-4xl leading-relaxed">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
-                aut alias velit quis deleniti sapiente itaque nobis dolorem
-                voluptatum accusantium.
+                I am a front-end developer specializing in building web apps and
+                static sites using React. I love delivering clean, intuitive
+                designs that enhance user experience.
               </p>
             </Fade>
 
             <div className="mt-10">
               <Fade inline delay={0.4} x={-5}>
                 <Button className="mr-12" accent href="/#work">
-                  See Work
+                  See My Work
                 </Button>
               </Fade>
               <Fade inline delay={0.5} x={-5}>
@@ -131,39 +131,39 @@ export default function Home() {
             <div className="flex-1">
               <Fade>
                 <h2 className="text-4xl font-light leading-normal mb-4 lg:mb-0">
-                  Building web apps to smb websites with smooth user experience
+                  Modern Challenges Require Modern Solutions
                 </h2>
               </Fade>
             </div>
             <div className="flex-1 max-w-2xl lg:ml-6 lg:mt-2">
               <Fade inline>
                 <p className="mb-6">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Possimus quos ab repellat corrupti nemo sequi nobis vitae
-                  dolores quas!
+                  My journey as a professional web developer began with
+                  freelancing for SMB clients. This was an incredible learning
+                  experience that taught me a lot about the industry.
                 </p>
               </Fade>
               <Fade inline>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Possimus quos ab repellat corrupti nemo sequi nobis vitae
-                  dolores quas!
+                  I discovered the importance of conversion-focused design,
+                  on-page SEO, and intuitive layouts, and learned how to deliver
+                  a project from start to finish.
                 </p>
               </Fade>
             </div>
             <div className="flex-1 max-w-2xl lg:mt-2">
               <Fade inline>
                 <p className="mb-6">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Possimus quos ab repellat corrupti nemo sequi nobis vitae
-                  dolores quas!
+                  I enjoy finding new and innovative solutions to integrate into
+                  my front-end work, and I have recently started working with
+                  web3 technologies in many of my projects.
                 </p>
               </Fade>
               <Fade inline>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Possimus quos ab repellat corrupti nemo sequi nobis vitae
-                  dolores quas!
+                  I am eager to delve deeper into the constantly evolving world
+                  of modern front-end tech and use my knowledge to create
+                  meaningful, user-centered online experiences.
                 </p>
               </Fade>
             </div>
