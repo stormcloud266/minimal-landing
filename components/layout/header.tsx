@@ -5,7 +5,7 @@ import Fade from "@components/animations/fade";
 const links = [
   { href: "/#about", text: "About" },
   { href: "/#work", text: "Work" },
-  { href: "/#contact", text: "Contact" },
+  { href: "#contact", text: "Contact" },
 ];
 
 const Header = () => {

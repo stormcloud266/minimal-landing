@@ -16,7 +16,7 @@ const socialData = [
 
 const Contact = ({}: ContactProps) => {
   return (
-    <Section>
+    <Section id="contact">
       <Wrapper>
         <Fade>
           <h2 className="mb-16 text-center">Let&apos;s Connect</h2>
