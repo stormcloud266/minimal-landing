@@ -106,7 +106,7 @@ export default function Home() {
             <Fade delay={0.2}>
               <p className="text-xl max-w-4xl leading-relaxed">
                 I am a front-end developer specializing in building web apps and
-                static sites using React. I love delivering clean, intuitive
+                static sites with React. I love delivering clean, intuitive
                 designs that enhance user experience.
               </p>
             </Fade>
@@ -139,15 +139,15 @@ export default function Home() {
               <Fade inline>
                 <p className="mb-6">
                   My journey as a professional web developer began with
-                  freelancing for SMB clients. This was an incredible learning
-                  experience that taught me a lot about the industry.
+                  freelancing for SMB clients, an incredible learning experience
+                  that taught me a lot about the industry.
                 </p>
               </Fade>
               <Fade inline>
                 <p>
-                  I discovered the importance of conversion-focused design,
-                  on-page SEO, and intuitive layouts, and learned how to deliver
-                  a project from start to finish.
+                  During this time I learned the importance of
+                  conversion-focused design, on-page SEO, intuitive layouts, and
+                  delivering a project from start to finish.
                 </p>
               </Fade>
             </div>

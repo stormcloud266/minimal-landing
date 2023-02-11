@@ -61,7 +61,7 @@ const Projects = ({}: ProjectsProps) => {
       <div className="min-h-screen flex items-center">
         <Section>
           <Wrapper>
-            <div className="flex flex-col lg:flex-row gap-16 max-w-xl lg:max-w-none mx-auto">
+            <div className="flex flex-col items-center lg:flex-row gap-16 max-w-xl lg:max-w-none mx-auto">
               <div className="flex-1">
                 <Fade duration={0.8}>
                   <h1 className="mb-8 max-w-4xl leading-snug">
@@ -92,7 +92,7 @@ const Projects = ({}: ProjectsProps) => {
               <div className="relative flex-1">
                 <Fade delay={0.2} y={10}>
                   <Image
-                    src={"/assets/carteblock-hero.webp"}
+                    src={"/assets/test.png"}
                     width={1000}
                     height={570}
                     alt=""
@@ -155,7 +155,7 @@ const Projects = ({}: ProjectsProps) => {
           <Fade y={10} duration={0.8}>
             <div className="flex justify-center">
               <Image
-                src={"/assets/carteblock-multi-device-mockup.webp"}
+                src={"/assets/test.png"}
                 width={1000}
                 height={630}
                 alt=""
