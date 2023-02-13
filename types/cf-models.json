@@ -1,0 +1,354 @@
+{
+  "contentTypes": [
+    {
+      "name": "Case Study",
+      "description": "",
+      "displayField": "title",
+      "fields": [
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "slug",
+          "name": "Slug",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "unique": true
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "featured_study",
+          "name": "Featured Study",
+          "type": "Boolean",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "order",
+          "name": "Order",
+          "type": "Integer",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "last_updated",
+          "name": "Last Updated",
+          "type": "Date",
+          "localized": false,
+          "required": true,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "live_site_url",
+          "name": "Live Site URL",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "github_link",
+          "name": "Github Link",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "display_tags",
+          "name": "Display Tags",
+          "type": "Object",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "filter_tags",
+          "name": "Filter Tags",
+          "type": "Object",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "intro_text",
+          "name": "Intro Text",
+          "type": "Text",
+          "localized": false,
+          "required": true,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "hero_image",
+          "name": "Hero Image",
+          "type": "Link",
+          "localized": false,
+          "required": true,
+          "validations": [],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        },
+        {
+          "id": "portfolio_image",
+          "name": "Portfolio Image",
+          "type": "Link",
+          "localized": false,
+          "required": true,
+          "validations": [],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        },
+        {
+          "id": "motivation_header",
+          "name": "Motivation Header",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "motivation_body",
+          "name": "Motivation Body",
+          "type": "RichText",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "enabledMarks": ["bold", "italic", "underline", "code"],
+              "message": "Only bold, italic, underline, and code marks are allowed"
+            },
+            {
+              "enabledNodeTypes": [
+                "heading-3",
+                "heading-4",
+                "heading-5",
+                "heading-6",
+                "ordered-list",
+                "unordered-list",
+                "hr",
+                "blockquote",
+                "embedded-entry-block",
+                "embedded-asset-block",
+                "table",
+                "hyperlink",
+                "entry-hyperlink",
+                "asset-hyperlink",
+                "embedded-entry-inline"
+              ],
+              "message": "Only heading 3, heading 4, heading 5, heading 6, ordered list, unordered list, horizontal rule, quote, block entry, asset, table, link to Url, link to entry, link to asset, and inline entry nodes are allowed"
+            },
+            {
+              "nodes": {}
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "solution_header",
+          "name": "Solution Header",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "solution_body",
+          "name": "Solution Body",
+          "type": "RichText",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "enabledNodeTypes": [
+                "ordered-list",
+                "unordered-list",
+                "hr",
+                "blockquote"
+              ],
+              "message": "Only ordered list, unordered list, horizontal rule, and quote nodes are allowed"
+            },
+            {
+              "nodes": {}
+            },
+            {
+              "enabledMarks": ["bold", "italic", "underline", "code"],
+              "message": "Only bold, italic, underline, and code marks are allowed"
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "multi_device_image",
+          "name": "Multi Device Image",
+          "type": "Link",
+          "localized": false,
+          "required": true,
+          "validations": [],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        },
+        {
+          "id": "process_body",
+          "name": "Process Body",
+          "type": "RichText",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "enabledMarks": ["bold", "italic", "underline", "code"],
+              "message": "Only bold, italic, underline, and code marks are allowed"
+            },
+            {
+              "enabledNodeTypes": [
+                "heading-1",
+                "heading-2",
+                "heading-3",
+                "heading-4",
+                "heading-5",
+                "heading-6",
+                "ordered-list",
+                "unordered-list",
+                "hr",
+                "blockquote",
+                "embedded-entry-block",
+                "embedded-asset-block",
+                "table",
+                "hyperlink",
+                "entry-hyperlink",
+                "asset-hyperlink",
+                "embedded-entry-inline"
+              ],
+              "message": "Only heading 1, heading 2, heading 3, heading 4, heading 5, heading 6, ordered list, unordered list, horizontal rule, quote, block entry, asset, table, link to Url, link to entry, link to asset, and inline entry nodes are allowed"
+            },
+            {
+              "nodes": {}
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "process_list",
+          "name": "Process List",
+          "type": "Object",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "challenges_list",
+          "name": "Challenges List",
+          "type": "Object",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "screenshot_gallery",
+          "name": "Screenshot Gallery",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [],
+            "linkType": "Asset"
+          }
+        }
+      ],
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "0jtifvu4sjrg"
+          }
+        },
+        "id": "case_study",
+        "type": "ContentType",
+        "createdAt": "2020-09-09T03:07:14.469Z",
+        "updatedAt": "2022-08-13T18:26:09.811Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 57,
+        "publishedAt": "2022-08-13T18:26:09.811Z",
+        "firstPublishedAt": "2020-09-09T03:07:14.912Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0uAZvFTNHQPBpJWEhsIC58"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0uAZvFTNHQPBpJWEhsIC58"
+          }
+        },
+        "publishedCounter": 29,
+        "version": 58,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0uAZvFTNHQPBpJWEhsIC58"
+          }
+        }
+      }
+    }
+  ]
+}

@@ -4,6 +4,7 @@ import { PropsWithChildren } from "react";
 
 interface ButtonProps extends PropsWithChildren {
   href?: string;
+  to?: string;
   onClick?: () => void;
   type?: "submit";
   accent?: boolean;
@@ -12,6 +13,7 @@ interface ButtonProps extends PropsWithChildren {
 
 const Button = ({
   href,
+  to,
   onClick,
   type,
   accent,
@@ -28,7 +30,15 @@ const Button = ({
 
   if (href) {
     return (
-      <Link href={href} {...commonProps}>
+      <a href={href} target="_blank" rel="noopener noreferrer" {...commonProps}>
+        {children}
+      </a>
+    );
+  }
+
+  if (to) {
+    return (
+      <Link href={to} {...commonProps}>
         {children}
       </Link>
     );

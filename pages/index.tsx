@@ -1,5 +1,6 @@
 import clsx from "clsx";
 import { m as motion } from "framer-motion";
+import { createClient } from "contentful";
 
 import Seo from "@components/layout/seo";
 
@@ -17,6 +18,25 @@ import FigmaIcon from "@components/icons/figmaIcon";
 import FramerIcon from "@components/icons/framerIcon";
 import AngleRightIcon from "@components/icons/angleRightIcon";
 import { useState } from "react";
+import { TypeCase_study, TypeCase_studyFields } from "types/contentfulModels";
+
+export async function getStaticProps() {
+  const client = createClient({
+    space: process.env.CONTENTFUL_SPACE_ID || "",
+    accessToken: process.env.CONTENTFUL_API_KEY || "",
+  });
+
+  const res = await client.getEntries<TypeCase_studyFields>({
+    content_type: "case_study",
+    order: "fields.order",
+  });
+
+  return {
+    props: {
+      projects: res.items,
+    },
+  };
+}
 
 const iconData = [
   {
@@ -41,54 +61,7 @@ const iconData = [
   },
 ];
 
-const projectData = [
-  {
-    name: "AABS",
-    label: "interesting label thing",
-    description:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos cupiditate laboriosam quam nesciunt voluptate consectetur exercitationem.",
-    highlights: [
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, reprehenderit!",
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores optio blanditiis tenetur.",
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-    ],
-  },
-  {
-    name: "Carteblock",
-    label: "cool tech and design stuff",
-    description:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos cupiditate laboriosam quam nesciunt voluptate consectetur exercitationem dolore labore reiciendis quis.",
-    highlights: [
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam!",
-      "Lorem ipsum. Asperiores optio blanditiis tenetur.",
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. e",
-    ],
-  },
-  {
-    name: "InsureDAO",
-    label: "web3 landing page modern and sleek",
-    description:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos cupiditate laboriosam quam nesciunt voluptate consectetur exercitationem dolore labore reiciendis quis. Quos cupiditate laboriosam quam nesciunt voluptate consectetur exercitationem dolore labore reiciendis quis.",
-    highlights: [
-      "Lorem ipsum dolor Totam, reprehenderit!",
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit.  blanditiis tenetur.",
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. t",
-    ],
-  },
-  {
-    name: "Cody Bookkeeping",
-    label: "small business website",
-    description:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos cupiditate laboriosam quam nesciunt voluptate consectetur exercitationem dolore labore reiciendis quis. Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
-    highlights: [
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, reprehenderit!",
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores optio blanditiis tenetur.",
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. j",
-    ],
-  },
-];
-
-export default function Home() {
+export default function Home({ projects }: { projects: TypeCase_study[] }) {
   const [index, setIndex] = useState(0);
   return (
     <>
@@ -113,12 +86,12 @@ export default function Home() {
 
             <div className="mt-10">
               <Fade inline delay={0.4} x={-5}>
-                <Button className="mr-12" accent href="/#work">
+                <Button className="mr-12" accent to="/#work">
                   See My Work
                 </Button>
               </Fade>
               <Fade inline delay={0.5} x={-5}>
-                <TextLink href="/#contact">Contact</TextLink>
+                <TextLink to="/#contact">Contact</TextLink>
               </Fade>
             </div>
           </Wrapper>
@@ -187,9 +160,9 @@ export default function Home() {
           <motion.div layout>
             <h2 className="text-center mb-28">Recent Projects</h2>
             <div className="flex justify-center flex-wrap gap-x-8 gap-y-4">
-              {projectData.map(({ name }, i) => (
+              {projects.map(({ fields }, i: number) => (
                 <button
-                  key={name}
+                  key={fields.slug}
                   onClick={() => setIndex(i)}
                   className={clsx(
                     "transition-colors",
@@ -198,48 +171,53 @@ export default function Home() {
                       : "text-gray-500 hover:text-gray-300"
                   )}
                 >
-                  <h3 className="text-current">{name}</h3>
+                  <h3 className="text-current">{fields.title}</h3>
                 </button>
               ))}
             </div>
             <div className="mt-16 flex flex-col md:flex-row gap-16 lg:gap-36">
               <div className="max-w-prose flex-1">
-                <motion.p
-                  key={projectData[index].label}
+                {/* <motion.p
+                  key={projects[index].label}
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   className="text-base italic tracking-widest mb-4"
                 >
                   {projectData[index].label}
-                </motion.p>
+                </motion.p> */}
                 <motion.p
-                  key={projectData[index].description}
+                  key={projects[index].fields.intro_text}
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   className="text-gray-200 mb-4"
                 >
-                  {projectData[index].description}
+                  {projects[index].fields.intro_text}
                 </motion.p>
-                <TextLink href="/projects" accent>
+                <TextLink
+                  to={`/projects/${projects[index].fields.slug}`}
+                  accent
+                >
                   Read More about This Project
                 </TextLink>
               </div>
               <div className="max-w-2x flex-1">
                 <h4 className="mb-6 text-xl">Highlights</h4>
                 <ul>
-                  {projectData[index].highlights.map((text, i) => (
-                    <motion.li
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      key={text + i}
-                      className="mb-8 flex items-start"
-                    >
-                      <span className="mr-4 mt-2 text-gray-300 block bg-gray-700 rounded">
-                        <AngleRightIcon />
-                      </span>{" "}
-                      <span>{text}</span>
-                    </motion.li>
-                  ))}
+                  {projects[index].fields.challenges_list.list.map(
+                    (text: string, i: number) => (
+                      <motion.li
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        key={text + i}
+                        className="mb-8 flex items-start"
+                      >
+                        <span className="mr-4 mt-2 text-gray-300 block bg-gray-700 rounded">
+                          <AngleRightIcon />
+                        </span>{" "}
+                        <span>{text}</span>
+                      </motion.li>
+                    )
+                  )}
                 </ul>
               </div>
             </div>

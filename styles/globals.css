@@ -53,4 +53,8 @@ h3 {
   .button-hover:hover {
     box-shadow: 2px 2px 0;
   }
+
+  .text-block p {
+    @apply mt-4;
+  }
 }
