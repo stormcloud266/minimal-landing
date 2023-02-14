@@ -2,8 +2,10 @@ import { useState } from "react";
 import clsx from "clsx";
 import { m as motion } from "framer-motion";
 
-import AngleRightIcon from "@components/icons/angleRightIcon";
+import Tag from "@components/ui/tag";
 import TextLink from "@components/ui/textLink";
+
+import AngleRightIcon from "@components/icons/angleRightIcon";
 import { TypeCase_study } from "types/contentfulModels";
 
 interface WorkProps {
@@ -32,14 +34,17 @@ const Work = ({ projects }: WorkProps) => {
       </div>
       <div className="mt-16 flex flex-col md:flex-row gap-16 lg:gap-36">
         <div className="max-w-prose flex-1">
-          {/* <motion.p
-                  key={projects[index].label}
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  className="text-base italic tracking-widest mb-4"
-                >
-                  {projectData[index].label}
-                </motion.p> */}
+          <motion.div
+            key={projects[index].fields.display_tags.list}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className="flex flex-wrap gap-2 mb-4"
+          >
+            {projects[index].fields.display_tags.list.map((text: string) => (
+              <Tag key={text + index}>{text}</Tag>
+            ))}
+          </motion.div>
+
           <motion.p
             key={projects[index].fields.intro_text}
             initial={{ opacity: 0 }}
