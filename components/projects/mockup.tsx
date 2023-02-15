@@ -14,7 +14,13 @@ const Mockup = ({ imageUrl }: MockupProps) => {
       <Wrapper>
         <Fade y={10} duration={0.8}>
           <div className="flex justify-center">
-            <Image src={`https:${imageUrl}`} width={1000} height={630} alt="" />
+            <Image
+              src={`https:${imageUrl}`}
+              width={1000}
+              height={630}
+              quality={100}
+              alt=""
+            />
           </div>
         </Fade>
       </Wrapper>

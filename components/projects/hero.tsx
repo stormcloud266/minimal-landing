@@ -62,6 +62,7 @@ const Hero = ({
                   src={`https:${imageUrl}`}
                   width={1000}
                   height={570}
+                  quality={100}
                   alt=""
                 />
               </Fade>
