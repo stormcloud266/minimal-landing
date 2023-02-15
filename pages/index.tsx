@@ -1,8 +1,5 @@
 import { createClient } from "contentful";
 
-import Section from "@components/ui/section";
-import Wrapper from "@components/ui/wrapper";
-
 import Seo from "@components/layout/seo";
 
 import Hero from "@components/home/hero";
@@ -50,53 +47,45 @@ export default function Home({ projects }: { projects: TypeCase_study[] }) {
         linkHref="/#contact"
       />
 
-      <Section id="about" top={false}>
-        <Wrapper>
-          <About
-            title="Modern Challenges Require Modern Solutions"
-            paragraphsLeft={[
-              "My journey as a professional web developer began with freelancing for SMB clients, an incredible learning experience that taught me a lot about the industry.",
-              "During this time I learned the importance of conversion-focused design, on-page SEO, intuitive layouts, and delivering a project from start to finish.",
-              "",
-            ]}
-            paragraphsRight={[
-              "I enjoy finding new and innovative solutions to integrate into my front-end work, and I have recently started working with web3 technologies in many of my projects.",
-              "I am eager to delve deeper into the constantly evolving world of modern front-end tech and use my knowledge to create meaningful, user-centered online experiences.",
-            ]}
-          />
+      <About
+        title="Modern Challenges Require Modern Solutions"
+        paragraphsLeft={[
+          "My journey as a professional web developer began with freelancing for SMB clients, an incredible learning experience that taught me a lot about the industry.",
+          "During this time I learned the importance of conversion-focused design, on-page SEO, intuitive layouts, and delivering a project from start to finish.",
+          "",
+        ]}
+        paragraphsRight={[
+          "I enjoy finding new and innovative solutions to integrate into my front-end work, and I have recently started working with web3 technologies in many of my projects.",
+          "I am eager to delve deeper into the constantly evolving world of modern front-end tech and use my knowledge to create meaningful, user-centered online experiences.",
+        ]}
+      />
 
-          <TechList
-            list={[
-              {
-                icon: <ReactIcon />,
-                text: "React for building dynamic web apps and enhanced static sites and blogs",
-              },
-              {
-                icon: <StylesIcon />,
-                text: "SCSS modules or Tailwind for maintainable, modern styling",
-              },
-              {
-                icon: <GitIcon />,
-                text: "Git and Github for version control and seamless collaboration",
-              },
-              {
-                icon: <FramerIcon />,
-                text: "Framer Motion for smooth animations and an elevated user experience",
-              },
-              {
-                icon: <FigmaIcon />,
-                text: "Figma for design collaboration and prototyping",
-              },
-            ]}
-          />
-        </Wrapper>
-      </Section>
+      <TechList
+        list={[
+          {
+            icon: <ReactIcon />,
+            text: "React for building dynamic web apps and enhanced static sites and blogs",
+          },
+          {
+            icon: <StylesIcon />,
+            text: "SCSS modules or Tailwind for maintainable, modern styling",
+          },
+          {
+            icon: <GitIcon />,
+            text: "Git and Github for version control and seamless collaboration",
+          },
+          {
+            icon: <FramerIcon />,
+            text: "Framer Motion for smooth animations and an elevated user experience",
+          },
+          {
+            icon: <FigmaIcon />,
+            text: "Figma for design collaboration and prototyping",
+          },
+        ]}
+      />
 
-      <Section id="work">
-        <Wrapper>
-          <Work projects={projects} />
-        </Wrapper>
-      </Section>
+      <Work projects={projects} />
     </>
   );
 }
