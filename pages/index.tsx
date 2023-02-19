@@ -52,7 +52,6 @@ export default function Home({ projects }: { projects: TypeCase_study[] }) {
         paragraphsLeft={[
           "My journey as a professional web developer began with freelancing for SMB clients, an incredible learning experience that taught me a lot about the industry.",
           "During this time I learned the importance of conversion-focused design, on-page SEO, intuitive layouts, and delivering a project from start to finish.",
-          "",
         ]}
         paragraphsRight={[
           "I enjoy finding new and innovative solutions to integrate into my front-end work, and I have recently started working with web3 technologies in many of my projects.",
