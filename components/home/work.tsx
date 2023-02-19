@@ -67,7 +67,7 @@ const Work = ({ projects }: WorkProps) => {
               <div className="max-w-2x flex-1">
                 <h4 className="mb-6 text-xl">Highlights</h4>
                 <ul>
-                  {project.fields.challenges_list.list.map(
+                  {project.fields.highlights.list.map(
                     (text: string, i: number) => (
                       <motion.li
                         initial={{ opacity: 0, y: 5 }}
