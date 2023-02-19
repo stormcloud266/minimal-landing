@@ -28,7 +28,7 @@ const Hero = ({
     <div className="min-h-screen flex items-center">
       <Section>
         <Wrapper>
-          <div className="flex flex-col items-center lg:flex-row gap-16 max-w-xl lg:max-w-none mx-auto">
+          <div className="flex flex-col items-center lg:flex-row gap-16 max-w-2xl lg:max-w-none mx-auto">
             <div className="flex-1">
               <Fade duration={0.8}>
                 <h1 className="mb-8 max-w-4xl leading-snug">{title}</h1>
@@ -39,7 +39,7 @@ const Hero = ({
                     <Tag key={text}>{text}</Tag>
                   ))}
                 </div>
-                <p className="text-xl max-w-4xl leading-relaxed">{intro}</p>
+                <p className="lg:text-xl max-w-4xl leading-relaxed">{intro}</p>
               </Fade>
               <div className="mt-10">
                 {liveUrl && (

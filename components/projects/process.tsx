@@ -38,35 +38,37 @@ const Process = ({ body, list }: ProcessProps) => {
   return (
     <Section top={false}>
       <Wrapper>
-        <div className="mt-36">
-          <Fade>
-            <h2 className="mb-6">The Process</h2>
-          </Fade>
-          <div className="flex flex-col md:flex-row gap-16 justify-between">
+        <div className="max-w-2xl mx-auto lg:max-w-none">
+          <div className="mt-36">
             <Fade>
-              <div className="text-block max-w-prose">
-                {documentToReactComponents(body)}
-              </div>
+              <h2 className="mb-6">The Process</h2>
             </Fade>
+            <div className="flex flex-col lg:flex-row gap-16 justify-between">
+              <Fade>
+                <div className="text-block max-w-prose">
+                  {documentToReactComponents(body)}
+                </div>
+              </Fade>
 
-            <motion.ul
-              className="max-w-prose"
-              variants={containerVariants}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-            >
-              {list.map((text, i) => (
-                <motion.li variants={itemVariants} key={text}>
-                  <span className="text-gray-200 mt-6 flex items-start">
-                    <span className="mr-4 mt-1 text-gray-300 block bg-gray-700 rounded">
-                      <AngleRightIcon />
+              <motion.ul
+                className="max-w-prose"
+                variants={containerVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+              >
+                {list.map((text, i) => (
+                  <motion.li variants={itemVariants} key={text}>
+                    <span className="text-gray-200 mt-6 flex items-start">
+                      <span className="mr-4 mt-1 text-gray-300 block bg-gray-700 rounded">
+                        <AngleRightIcon />
+                      </span>
+                      {text}
                     </span>
-                    {text}
-                  </span>
-                </motion.li>
-              ))}
-            </motion.ul>
+                  </motion.li>
+                ))}
+              </motion.ul>
+            </div>
           </div>
         </div>
       </Wrapper>

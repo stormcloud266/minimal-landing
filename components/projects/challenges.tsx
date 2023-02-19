@@ -14,7 +14,7 @@ const Challenges = ({ list }: ChallengesProps) => {
         <Fade>
           <h2 className="text-center">The Challenges</h2>
         </Fade>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-y-12 gap-x-16 mt-16 md:max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-y-12 gap-x-16 mt-16 max-w-2xl lg:max-w-7xl mx-auto">
           {list.map((text) => (
             <Fade key={text}>
               <p className="flex items-start">
