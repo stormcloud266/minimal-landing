@@ -13,7 +13,7 @@ html {
 }
 
 body {
-  @apply leading-relaxed text-lg font-light;
+  @apply leading-relaxed md:text-lg font-light;
 }
 
 h1,
@@ -26,11 +26,11 @@ h6 {
 }
 
 h1 {
-  @apply text-4xl lg:text-7xl;
+  @apply text-4xl sm:text-5xl md:text-6xl lg:text-7xl;
 }
 
 h2 {
-  @apply text-6xl;
+  @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl;
 }
 
 h3 {

@@ -76,7 +76,7 @@ const Work = ({ projects }: WorkProps) => {
                         key={i}
                         className="mb-8 flex items-start"
                       >
-                        <span className="mr-4 mt-2 text-gray-300 block bg-gray-700 rounded">
+                        <span className="mr-4 mt-[6px] text-gray-300 block bg-gray-700 rounded">
                           <AngleRightIcon />
                         </span>{" "}
                         <span>{text}</span>
