@@ -15,7 +15,10 @@ import { TypeCase_studyFields } from "types/contentfulModels";
 const Projects = ({ project }: { project: TypeCase_studyFields }) => {
   return (
     <>
-      <Seo title={project.title} description={project.intro_text} />
+      <Seo
+        title={`${project.title} |  Case Study`}
+        description={project.intro_text}
+      />
 
       <Hero
         title={project.title}
