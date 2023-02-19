@@ -22,7 +22,7 @@ const Hero = ({
   linkHref,
 }: HeroProps) => {
   return (
-    <div className="min-h-screen flex items-center">
+    <div className="min-h-screen flex items-center max-w-2xl lg:max-w-none mx-auto">
       <Section>
         <Wrapper>
           <Fade duration={0.8}>

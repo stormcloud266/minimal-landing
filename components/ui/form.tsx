@@ -4,9 +4,9 @@ const Form = () => {
   const handleSubmit = () => {};
 
   return (
-    <form onSubmit={handleSubmit} className="max-w-xl mx-auto">
-      <div className="flex gap-4">
-        <div className="flex flex-col flex-1 mb-6">
+    <form onSubmit={handleSubmit} className="max-w-2xl mx-auto">
+      <div className="flex flex-col md:flex-row gap-6 mb-6">
+        <div className="flex flex-col flex-1">
           <label htmlFor="name" className="mb-1">
             Name
           </label>
@@ -38,7 +38,7 @@ const Form = () => {
         <textarea
           name="Message"
           id="message"
-          className="bg-gray-700 py-2 px-4 text-white rounded-sm h-24 resize-none"
+          className="bg-gray-700 py-2 px-4 text-white rounded-sm h-32 resize-none"
         />
       </div>
 

@@ -22,11 +22,11 @@ const Contact = ({}: ContactProps) => {
           <h2 className="mb-16 text-center">Let&apos;s Connect</h2>
         </Fade>
         <Fade delay={0.2}>
-          <div className="flex flex-col-reverse md:flex-row gap-16 md:gap-8 lg:gap-16">
+          <div className="flex flex-col-reverse lg:flex-row gap-16">
             <div className="flex-1">
               <Form />
             </div>
-            <div className="flex-1 max-w-prose md:mt-6">
+            <div className="flex-1 max-w-2xl mx-auto md:mt-6">
               <p className="mb-6">
                 While I am not actively seeking new job opportunities at the
                 moment, I am always open to connecting with like-minded

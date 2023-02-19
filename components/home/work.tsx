@@ -48,7 +48,7 @@ const Work = ({ projects }: WorkProps) => {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
           >
-            <div className="mt-16 flex flex-col md:flex-row gap-16 lg:gap-36">
+            <div className="mt-16 flex max-w-2xl mx-auto lg:max-w-none flex-col lg:flex-row gap-16 xl:gap-36">
               <div className="max-w-prose flex-1">
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.fields.display_tags.list.map((text: string) => (

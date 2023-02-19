@@ -26,7 +26,7 @@ h6 {
 }
 
 h1 {
-  @apply text-7xl;
+  @apply text-4xl lg:text-7xl;
 }
 
 h2 {
