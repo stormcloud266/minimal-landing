@@ -36,39 +36,37 @@ const itemVariants = {
 
 const Process = ({ body, list }: ProcessProps) => {
   return (
-    <Section top={false}>
+    <Section bottom={false}>
       <Wrapper>
         <div className="max-w-2xl mx-auto lg:max-w-none">
-          <div className="mt-36">
+          <Fade>
+            <h2 className="mb-2 lg:mb-8">The Process</h2>
+          </Fade>
+          <div className="flex flex-col lg:flex-row gap-8 lg:gap-32">
             <Fade>
-              <h2 className="mb-6">The Process</h2>
+              <div className="text-block max-w-prose">
+                {documentToReactComponents(body)}
+              </div>
             </Fade>
-            <div className="flex flex-col lg:flex-row gap-16 justify-between">
-              <Fade>
-                <div className="text-block max-w-prose">
-                  {documentToReactComponents(body)}
-                </div>
-              </Fade>
 
-              <motion.ul
-                className="max-w-prose"
-                variants={containerVariants}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-              >
-                {list.map((text, i) => (
-                  <motion.li variants={itemVariants} key={text}>
-                    <span className="text-gray-200 mt-6 flex items-start">
-                      <span className="mr-4 mt-1 text-gray-300 block bg-gray-700 rounded">
-                        <AngleRightIcon />
-                      </span>
-                      {text}
+            <motion.ul
+              className="max-w-prose"
+              variants={containerVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+            >
+              {list.map((text, i) => (
+                <motion.li variants={itemVariants} key={text}>
+                  <span className="text-gray-200 mt-6 flex items-start">
+                    <span className="mr-4 mt-1 text-gray-300 block bg-gray-700 rounded">
+                      <AngleRightIcon />
                     </span>
-                  </motion.li>
-                ))}
-              </motion.ul>
-            </div>
+                    {text}
+                  </span>
+                </motion.li>
+              ))}
+            </motion.ul>
           </div>
         </div>
       </Wrapper>

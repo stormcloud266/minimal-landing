@@ -9,12 +9,12 @@ interface ChallengesProps {
 
 const Challenges = ({ list }: ChallengesProps) => {
   return (
-    <Section>
+    <Section bottom={false}>
       <Wrapper>
         <Fade>
-          <h2 className="text-center">The Challenges</h2>
+          <h2 className="text-center mb-8 lg:mb-16">The Challenges</h2>
         </Fade>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-y-12 gap-x-16 mt-16 max-w-2xl lg:max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-y-8 lg:gap-y-12 gap-x-16 max-w-2xl lg:max-w-7xl mx-auto">
           {list.map((text) => (
             <Fade key={text}>
               <p className="flex items-start">

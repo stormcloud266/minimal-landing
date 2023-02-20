@@ -16,7 +16,7 @@ const Header = () => {
           <div className="flex justify-between items-center">
             <Link
               href="/"
-              className="font-semibold text-lg text-white uppercase hover:opacity-80 transition-opacity"
+              className="font-semibold sm:text-lg text-white uppercase hover:opacity-80 transition-opacity"
             >
               <span className="text-accent">Tawnee</span>.DEV
             </Link>

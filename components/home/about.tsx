@@ -13,10 +13,10 @@ const About = ({ title, paragraphsLeft, paragraphsRight }: AboutProps) => {
   return (
     <Section id="about" top={false} bottom={false}>
       <Wrapper>
-        <div className="flex flex-col gap-6 lg:flex-row justify-between max-w-2xl lg:max-w-none mx-auto">
-          <div className="flex-1">
+        <div className="flex flex-col gap-4 lg:gap-6 lg:flex-row justify-between max-w-2xl lg:max-w-none mx-auto">
+          <div className="flex-1 lg:mt-1 mb-2 lg:mb-0">
             <Fade>
-              <h2 className="text-4xl font-light leading-normal mt-1 mb-4 lg:mb-0">
+              <h2 className="text-3xl md:text-4xl font-light leading-normal">
                 {title}
               </h2>
             </Fade>

@@ -19,7 +19,7 @@ const Contact = ({}: ContactProps) => {
     <Section id="contact">
       <Wrapper>
         <Fade>
-          <h2 className="mb-16 text-center">Let&apos;s Connect</h2>
+          <h2 className="mb-8 lg:mb-16 text-center">Let&apos;s Connect</h2>
         </Fade>
         <Fade delay={0.2}>
           <div className="flex flex-col-reverse lg:flex-row gap-16">

@@ -20,10 +20,10 @@ const Work = ({ projects }: WorkProps) => {
   const project = projects[index];
 
   return (
-    <Section id="work">
+    <Section id="work" bottom={false}>
       <Wrapper>
         <Fade>
-          <h2 className="text-center mb-28">Recent Projects</h2>
+          <h2 className="text-center mb-16 lg:mb-28">Recent Projects</h2>
         </Fade>
         <div className="flex justify-center flex-wrap gap-x-8 gap-y-4">
           {projects.map(({ fields }, i: number) => (
@@ -36,7 +36,9 @@ const Work = ({ projects }: WorkProps) => {
               )}
             >
               <Fade inline>
-                <h3 className="text-current">{fields.title}</h3>
+                <h3 className="text-current text-xl lg:text-3xl">
+                  {fields.title}
+                </h3>
               </Fade>
             </button>
           ))}
