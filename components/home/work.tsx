@@ -4,13 +4,13 @@ import { m as motion } from "framer-motion";
 
 import Tag from "@components/ui/tag";
 import TextLink from "@components/ui/textLink";
-
 import AngleRightIcon from "@components/icons/angleRightIcon";
 import Section from "@components/ui/section";
 import Wrapper from "@components/ui/wrapper";
+import Fade from "@components/animations/fade";
 
 import { TypeCase_study } from "types/contentfulModels";
-import Fade from "@components/animations/fade";
+
 interface WorkProps {
   projects: TypeCase_study[];
 }

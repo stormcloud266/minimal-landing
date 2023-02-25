@@ -1,8 +1,9 @@
+import { Document } from "@contentful/rich-text-types";
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+
 import Fade from "@components/animations/fade";
 import Section from "@components/ui/section";
 import Wrapper from "@components/ui/wrapper";
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
-import { Document } from "@contentful/rich-text-types";
 
 interface MotivationProps {
   motivationHeader: string;

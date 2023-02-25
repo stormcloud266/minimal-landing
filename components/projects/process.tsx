@@ -1,11 +1,10 @@
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { Document } from "@contentful/rich-text-types";
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { m as motion } from "framer-motion";
 
 import Fade from "@components/animations/fade";
 import Section from "@components/ui/section";
 import Wrapper from "@components/ui/wrapper";
-
 import AngleRightIcon from "@components/icons/angleRightIcon";
 
 interface ProcessProps {
@@ -56,7 +55,7 @@ const Process = ({ body, list }: ProcessProps) => {
               whileInView="visible"
               viewport={{ once: true }}
             >
-              {list.map((text, i) => (
+              {list.map((text) => (
                 <motion.li variants={itemVariants} key={text}>
                   <span className="text-gray-200 mt-6 flex items-start">
                     <span className="mr-4 mt-1 text-gray-300 block bg-gray-700 rounded">

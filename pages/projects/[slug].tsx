@@ -3,7 +3,6 @@ import { createClient } from "contentful";
 import { Document } from "@contentful/rich-text-types";
 
 import Seo from "@components/layout/seo";
-
 import Hero from "@components/projects/hero";
 import Motivation from "@components/projects/motivation";
 import Process from "@components/projects/process";

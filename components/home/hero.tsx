@@ -1,6 +1,5 @@
 import Fade from "@components/animations/fade";
 import Button from "@components/ui/button";
-import Section from "@components/ui/section";
 import TextLink from "@components/ui/textLink";
 import Wrapper from "@components/ui/wrapper";
 

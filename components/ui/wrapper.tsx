@@ -5,7 +5,7 @@ interface WrapperProps extends PropsWithChildren {
   noBreak?: boolean;
 }
 
-const Wrapper = ({ children, noBreak }: WrapperProps) => {
+const Wrapper = ({ noBreak, children }: WrapperProps) => {
   return (
     <div
       className={clsx(

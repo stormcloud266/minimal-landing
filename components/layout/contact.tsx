@@ -6,15 +6,25 @@ import Form from "@components/ui/form";
 import Section from "@components/ui/section";
 import Wrapper from "@components/ui/wrapper";
 
-interface ContactProps {}
-
 const socialData = [
-  { icon: <GithubIcon />, label: "go to github", href: "https://github.com" },
-  { icon: <TwitterIcon />, label: "go to twitter", href: "https://github.com" },
-  { icon: <CodepenIcon />, label: "go to codepen", href: "https://github.com" },
+  {
+    icon: <GithubIcon />,
+    label: "go to Github",
+    href: "https://github.com/stormcloud266",
+  },
+  {
+    icon: <TwitterIcon />,
+    label: "go to Twitter",
+    href: "https://twitter.com/stormcloud266",
+  },
+  {
+    icon: <CodepenIcon />,
+    label: "go to Codepen",
+    href: "https://codepen.io/stormcloud266",
+  },
 ];
 
-const Contact = ({}: ContactProps) => {
+const Contact = () => {
   return (
     <Section id="contact">
       <Wrapper>
