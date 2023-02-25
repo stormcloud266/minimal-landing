@@ -24,11 +24,11 @@ const Hero = ({
     <div className="min-h-screen flex items-center max-w-2xl lg:max-w-none mx-auto pt-28 pb-28">
       <Wrapper>
         <Fade duration={0.8}>
-          <h1 className="mb-8 max-w-6xl leading-snug">{title}</h1>
+          <h1 className="mb-8 max-w-6xlleading-snug">{title}</h1>
         </Fade>
 
         <Fade delay={0.2}>
-          <p className="text-lg lg:text-xl max-w-4xl leading-relaxed">
+          <p className="text-lg lg:text-xl max-w-4xl leading-relaxed lg:leading-relaxed">
             {description}
           </p>
         </Fade>

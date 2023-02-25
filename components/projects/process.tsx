@@ -57,7 +57,7 @@ const Process = ({ body, list }: ProcessProps) => {
             >
               {list.map((text) => (
                 <motion.li variants={itemVariants} key={text}>
-                  <span className="text-gray-200 mt-6 flex items-start">
+                  <span className="text-gray-200 mt-6 flex items-start text-base">
                     <span className="mr-4 mt-1 text-gray-300 block bg-gray-700 rounded">
                       <AngleRightIcon />
                     </span>

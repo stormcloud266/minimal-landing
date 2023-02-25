@@ -16,7 +16,6 @@ export default function App({ Component, pageProps }: AppProps) {
       <Header />
       <main className={poppins.className}>
         <Component {...pageProps} />
-        <Contact />
       </main>
       <Footer />
     </LazyMotion>

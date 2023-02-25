@@ -1,6 +1,7 @@
 import { createClient } from "contentful";
 
 import Seo from "@components/layout/seo";
+import Contact from "@components/layout/contact";
 
 import Hero from "@components/home/hero";
 import About from "@components/home/about";
@@ -15,25 +16,7 @@ import FramerIcon from "@components/icons/framerIcon";
 
 import { TypeCase_study, TypeCase_studyFields } from "types/contentfulModels";
 
-export async function getStaticProps() {
-  const client = createClient({
-    space: process.env.CONTENTFUL_SPACE_ID || "",
-    accessToken: process.env.CONTENTFUL_API_KEY || "",
-  });
-
-  const res = await client.getEntries<TypeCase_studyFields>({
-    content_type: "case_study",
-    order: "fields.order",
-  });
-
-  return {
-    props: {
-      projects: res.items,
-    },
-  };
-}
-
-export default function Home({ projects }: { projects: TypeCase_study[] }) {
+const Home = ({ projects }: { projects: TypeCase_study[] }) => {
   return (
     <>
       <Seo />
@@ -85,6 +68,28 @@ export default function Home({ projects }: { projects: TypeCase_study[] }) {
       />
 
       <Work projects={projects} />
+
+      <Contact />
     </>
   );
+};
+
+export default Home;
+
+export async function getStaticProps() {
+  const client = createClient({
+    space: process.env.CONTENTFUL_SPACE_ID || "",
+    accessToken: process.env.CONTENTFUL_API_KEY || "",
+  });
+
+  const res = await client.getEntries<TypeCase_studyFields>({
+    content_type: "case_study",
+    order: "fields.order",
+  });
+
+  return {
+    props: {
+      projects: res.items,
+    },
+  };
 }

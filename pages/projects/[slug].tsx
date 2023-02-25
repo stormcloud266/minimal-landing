@@ -3,6 +3,8 @@ import { createClient } from "contentful";
 import { Document } from "@contentful/rich-text-types";
 
 import Seo from "@components/layout/seo";
+import Contact from "@components/layout/contact";
+
 import Hero from "@components/projects/hero";
 import Motivation from "@components/projects/motivation";
 import Process from "@components/projects/process";
@@ -43,6 +45,8 @@ const Projects = ({ project }: { project: TypeCase_studyFields }) => {
       />
 
       <Challenges list={project.challenges_list.list} />
+
+      <Contact />
     </>
   );
 };

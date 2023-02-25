@@ -76,7 +76,7 @@ const Work = ({ projects }: WorkProps) => {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: i * 0.15 }}
                         key={i}
-                        className="mb-8 flex items-start"
+                        className="mb-8 flex items-start text-base"
                       >
                         <span className="mr-4 mt-[6px] text-gray-300 block bg-gray-700 rounded">
                           <AngleRightIcon />
