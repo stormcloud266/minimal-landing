@@ -3,7 +3,7 @@ import Button from "@components/ui/button";
 const Form = () => {
   return (
     <form
-      name="contact"
+      name="Dev Portfolio"
       action="/success"
       method="POST"
       data-netlify="true"
