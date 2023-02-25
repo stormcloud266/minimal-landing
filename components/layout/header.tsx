@@ -1,9 +1,12 @@
+import { useEffect, useState } from "react";
 import Link from "next/link";
+import { m as motion } from "framer-motion";
+
 import Wrapper from "@components/ui/wrapper";
 import Fade from "@components/animations/fade";
-import { useState } from "react";
 import CloseIcon from "@components/icons/closeIcon";
 import HamburgerIcon from "@components/icons/hamburgerIcon";
+import useCurrentWidth from "hooks/useCurrentWidth";
 
 const links = [
   { href: "/#about", text: "About" },
@@ -11,8 +14,30 @@ const links = [
   { href: "#contact", text: "Contact" },
 ];
 
+const navVariants = {
+  closed: {
+    opacity: 0,
+    transitionEnd: {
+      display: "none",
+    },
+  },
+  open: {
+    opacity: 1,
+    display: "flex",
+  },
+};
+
+const BREAK_POINT = 640;
+
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const width = useCurrentWidth();
+
+  useEffect(() => {
+    if (width < BREAK_POINT) {
+      setIsOpen(false);
+    }
+  }, [width]);
 
   return (
     <header className="py-4 absolute w-full">
@@ -33,17 +58,37 @@ const Header = () => {
               {isOpen ? <CloseIcon /> : <HamburgerIcon />}
             </button>
 
-            <nav className="absolute sm:static pt-12 sm:pt-0 pb-2 sm:pb-0 px-2 sm:px-0 top-0 left-0 w-full sm:w-min flex flex-col items-center sm:block z-1 bg-gray-800 sm:bg-transparent text-white sm:text-gray-400 text-center sm:text-right">
-              {links.map(({ href, text }) => (
-                <Link
-                  href={href}
-                  key={href}
-                  className="py-2 px-8 sm:px-0 sm:py-0 sm:ml-8 my-2 sm:my-0 uppercase text-sm tracking-wider transition-colors rounded-lg hover:text-accent hover:bg-black"
+            {width < BREAK_POINT ? (
+              <div className="block sm:hidden absolute top-0 left-0 w-full z-1">
+                <motion.nav
+                  variants={navVariants}
+                  animate={isOpen ? "open" : "closed"}
+                  className=" pt-14 pb-4 px-2  flex-col items-center bg-gray-800 text-white text-center"
                 >
-                  {text}
-                </Link>
-              ))}
-            </nav>
+                  {links.map(({ href, text }) => (
+                    <Link
+                      href={href}
+                      key={href}
+                      className="py-2 px-8 my-2 uppercase text-lg tracking-wider transition-colors rounded-lg hover:text-accent hover:bg-black"
+                    >
+                      {text}
+                    </Link>
+                  ))}
+                </motion.nav>
+              </div>
+            ) : (
+              <nav className="hidden sm:block">
+                {links.map(({ href, text }) => (
+                  <Link
+                    href={href}
+                    key={href}
+                    className="ml-8 uppercase text-sm tracking-wider transition-colors hover:text-accent"
+                  >
+                    {text}
+                  </Link>
+                ))}
+              </nav>
+            )}
           </div>
         </Wrapper>
       </Fade>
