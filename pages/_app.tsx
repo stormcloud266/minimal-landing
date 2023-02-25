@@ -8,7 +8,11 @@ import Contact from "@components/layout/contact";
 
 import "../styles/globals.css";
 
-const poppins = Poppins({ weight: ["300", "600"], subsets: ["latin"] });
+const poppins = Poppins({
+  weight: ["300", "600"],
+  subsets: ["latin"],
+  display: "swap",
+});
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
