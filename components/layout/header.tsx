@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { m as motion } from "framer-motion";
 
@@ -6,6 +6,7 @@ import Wrapper from "@components/ui/wrapper";
 import Fade from "@components/animations/fade";
 import CloseIcon from "@components/icons/closeIcon";
 import HamburgerIcon from "@components/icons/hamburgerIcon";
+import { useRouter } from "next/router";
 
 const links = [
   { href: "/#about", text: "About" },
@@ -27,7 +28,12 @@ const navVariants = {
 };
 
 const Header = () => {
+  const { asPath } = useRouter();
   const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    setIsOpen(false);
+  }, [asPath]);
 
   return (
     <header className="py-4 absolute w-full">
