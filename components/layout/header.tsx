@@ -53,15 +53,23 @@ const Header = () => {
               <motion.nav
                 variants={navVariants}
                 animate={isOpen ? "open" : "closed"}
-                className=" pt-14 pb-4 px-2  flex-col items-center bg-gray-800 text-white text-center"
+                className=" pt-14 pb-8 px-2  flex-col items-center bg-gray-800 text-white text-center"
               >
-                {links.map(({ href, text }) => (
+                {links.map(({ href, text }, i) => (
                   <Link
                     href={href}
                     key={href}
                     className="py-2 px-8 my-2 uppercase text-lg tracking-wider transition-colors rounded-lg hover:text-accent hover:bg-black"
                   >
-                    {text}
+                    <motion.span
+                      animate={
+                        isOpen ? { y: 0, opacity: 1 } : { y: 10, opacity: 0 }
+                      }
+                      transition={{ delay: 0.06 * i, ease: "easeOut" }}
+                      className="block"
+                    >
+                      {text}
+                    </motion.span>
                   </Link>
                 ))}
               </motion.nav>

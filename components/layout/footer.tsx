@@ -18,7 +18,9 @@ const Footer = () => {
             <p className="font-semibold text-lg text-white uppercase">
               <span className="text-accent">Tawnee</span>.DEV
             </p>
-            <p className="text-sm text-gray-400">Copyright &copy; 2023</p>
+            <p className="text-sm text-gray-400">
+              Copyright &copy; 2020 - {new Date().getFullYear()}
+            </p>
             <nav>
               {links.map(({ href, text }, i) => (
                 <Link
