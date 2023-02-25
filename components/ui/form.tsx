@@ -1,10 +1,18 @@
 import Button from "@components/ui/button";
 
 const Form = () => {
-  const handleSubmit = () => {};
-
   return (
-    <form onSubmit={handleSubmit} className="max-w-2xl mx-auto">
+    <form
+      name="contact"
+      action="/success"
+      method="POST"
+      data-netlify="true"
+      data-netlify-honeypot="bot-field"
+      className="max-w-2xl mx-auto"
+    >
+      <input type="hidden" name="form-name" value="Dev Portfolio" />
+      <input type="hidden" name="bot-field" />
+
       <div className="flex flex-col md:flex-row gap-6 mb-6">
         <div className="flex flex-col flex-1">
           <label htmlFor="name" className="mb-1">
