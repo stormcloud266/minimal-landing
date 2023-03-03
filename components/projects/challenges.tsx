@@ -18,7 +18,7 @@ const Challenges = ({ list }: ChallengesProps) => {
           {list.map((text) => (
             <Fade key={text}>
               <p className="flex items-start">
-                <span className="mr-4 mt-2 text-gray-300 block bg-gray-700 rounded">
+                <span className="mr-4 mt-2 text-gray-200 block bg-slate-700 rounded">
                   <CheckIcon />
                 </span>
                 {text}

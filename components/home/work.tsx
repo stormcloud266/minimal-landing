@@ -48,7 +48,7 @@ const Work = ({ projects }: WorkProps) => {
             key={project.sys.id}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.7 }}
           >
             <div className="mt-16 flex max-w-2xl mx-auto lg:max-w-none flex-col lg:flex-row gap-16 xl:gap-36">
               <div className="max-w-prose flex-1">
@@ -78,7 +78,7 @@ const Work = ({ projects }: WorkProps) => {
                         key={i}
                         className="mb-8 flex items-start text-base"
                       >
-                        <span className="mr-4 mt-[6px] text-gray-300 block bg-gray-700 rounded">
+                        <span className="mr-4 mt-[6px] text-gray-300 block bg-slate-700 rounded">
                           <AngleRightIcon />
                         </span>{" "}
                         <span>{text}</span>
