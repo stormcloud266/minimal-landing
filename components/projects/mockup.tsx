@@ -10,21 +10,19 @@ interface MockupProps {
 
 const Mockup = ({ imageUrl }: MockupProps) => {
   return (
-    <Section bottom={false}>
-      <Wrapper>
-        <Fade y={10} duration={0.8}>
-          <div className="flex justify-center">
-            <Image
-              src={`https:${imageUrl}`}
-              width={1000}
-              height={630}
-              quality={100}
-              alt=""
-            />
-          </div>
-        </Fade>
-      </Wrapper>
-    </Section>
+    <Wrapper>
+      <Fade y={10} duration={0.8}>
+        <div className="flex justify-center">
+          <Image
+            src={`https:${imageUrl}`}
+            width={1000}
+            height={630}
+            quality={100}
+            alt=""
+          />
+        </div>
+      </Fade>
+    </Wrapper>
   );
 };
 

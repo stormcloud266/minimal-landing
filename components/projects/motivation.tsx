@@ -19,7 +19,7 @@ const Motivation = ({
   solutionBody,
 }: MotivationProps) => {
   return (
-    <Section top={false} bottom={false}>
+    <Section top={false}>
       <Wrapper>
         <div className="flex flex-col lg:flex-row justify-center mx-auto max-w-2xl lg:max-w-none">
           <div className="basis-1/4 lg:text-right pt-10  lg:pt-20 pl-6 md:pl-12 lg:pl-0 lg:pr-32 border-l border-gray-500 lg:border-none">

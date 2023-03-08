@@ -27,18 +27,19 @@ const Work = ({ projects }: WorkProps) => {
         </Fade>
         <div className="flex justify-center flex-wrap gap-x-8 gap-y-4">
           {projects.map(({ fields }, i: number) => (
-            <button
-              key={fields.slug}
-              onClick={() => setIndex(i)}
-              className={clsx(
-                "transition-colors",
-                i === index ? "text-white" : "text-gray-500 hover:text-gray-300"
-              )}
-            >
-              <h3 className="text-current text-xl lg:text-3xl">
+            <h3 className="text-current text-xl lg:text-3xl" key={fields.slug}>
+              <button
+                onClick={() => setIndex(i)}
+                className={clsx(
+                  "transition-colors",
+                  i === index
+                    ? "text-white"
+                    : "text-gray-500 hover:text-gray-300"
+                )}
+              >
                 <Fade inline>{fields.title}</Fade>
-              </h3>
-            </button>
+              </button>
+            </h3>
           ))}
         </div>
         <Fade>
