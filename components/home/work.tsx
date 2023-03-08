@@ -35,11 +35,9 @@ const Work = ({ projects }: WorkProps) => {
                 i === index ? "text-white" : "text-gray-500 hover:text-gray-300"
               )}
             >
-              <Fade inline>
-                <h3 className="text-current text-xl lg:text-3xl">
-                  {fields.title}
-                </h3>
-              </Fade>
+              <h3 className="text-current text-xl lg:text-3xl">
+                <Fade inline>{fields.title}</Fade>
+              </h3>
             </button>
           ))}
         </div>

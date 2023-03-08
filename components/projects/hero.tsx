@@ -39,17 +39,17 @@ const Hero = ({
               </div>
               <p className="lg:text-xl max-w-4xl leading-relaxed">{intro}</p>
             </Fade>
-            <div className="mt-10">
+            <div className="mt-10 flex items-center">
               {liveUrl && (
-                <Fade inline delay={0.4} x={-5}>
+                <Fade delay={0.4} x={-5}>
                   <Button className="mr-12" accent href={liveUrl}>
                     Visit Live Site
                   </Button>
                 </Fade>
               )}
-              {githubUrl && (
-                <Fade inline delay={0.5} x={-5}>
-                  <TextLink href={githubUrl}>See the Code</TextLink>
+              {true && (
+                <Fade delay={0.7} x={-5}>
+                  <TextLink href={"#githubUrl"}>See the Code</TextLink>
                 </Fade>
               )}
             </div>
