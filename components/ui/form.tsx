@@ -23,6 +23,7 @@ const Form = () => {
             id="name"
             name="Name"
             className="bg-gray-700 py-2 px-4 text-white rounded-sm w-full"
+            required
           />
         </div>
 
@@ -35,6 +36,7 @@ const Form = () => {
             id="email"
             name="Email"
             className="bg-gray-700 py-2 px-4 text-white rounded-sm w-full"
+            required
           />
         </div>
       </div>
@@ -47,6 +49,7 @@ const Form = () => {
           name="Message"
           id="message"
           className="bg-gray-700 py-2 px-4 text-white rounded-sm h-32 resize-none"
+          required
         />
       </div>
 
