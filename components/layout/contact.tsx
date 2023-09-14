@@ -2,7 +2,7 @@ import Fade from "@components/animations/fade";
 import CodepenIcon from "@components/icons/codepenIcon";
 import GithubIcon from "@components/icons/githubIcon";
 import TwitterIcon from "@components/icons/twitterIcon";
-import Form from "@components/ui/form";
+import Form from "@components/ui/form/form";
 import Section from "@components/ui/section";
 import Wrapper from "@components/ui/wrapper";
 
