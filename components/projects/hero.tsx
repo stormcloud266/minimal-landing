@@ -47,9 +47,9 @@ const Hero = ({
                   </Button>
                 </Fade>
               )}
-              {true && (
+              {githubUrl && (
                 <Fade delay={0.7} x={-5}>
-                  <TextLink href={"#githubUrl"}>See the Code</TextLink>
+                  <TextLink href={githubUrl}>See the Code</TextLink>
                 </Fade>
               )}
             </div>

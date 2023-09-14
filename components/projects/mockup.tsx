@@ -1,7 +1,6 @@
 import Image from "next/image";
 
 import Fade from "@components/animations/fade";
-import Section from "@components/ui/section";
 import Wrapper from "@components/ui/wrapper";
 
 interface MockupProps {

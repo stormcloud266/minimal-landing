@@ -27,7 +27,7 @@ const Footer = () => {
                   href={href}
                   key={href}
                   className={clsx("uppercase text-sm tracking-wider", {
-                    "ml-8": i != 0,
+                    "ml-8": i !== 0,
                   })}
                 >
                   {text}
