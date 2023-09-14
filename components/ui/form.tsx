@@ -22,7 +22,7 @@ const Form = () => {
             type="text"
             id="name"
             name="Name"
-            className="bg-gray-700 py-2 px-4 text-white rounded-sm"
+            className="bg-gray-700 py-2 px-4 text-white rounded-sm w-full"
           />
         </div>
 
@@ -34,7 +34,7 @@ const Form = () => {
             type="text"
             id="email"
             name="Email"
-            className="bg-gray-700 py-2 px-4 text-white rounded-sm"
+            className="bg-gray-700 py-2 px-4 text-white rounded-sm w-full"
           />
         </div>
       </div>
