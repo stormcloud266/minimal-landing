@@ -38,14 +38,15 @@ const Contact = () => {
             </div>
             <div className="flex-1 max-w-2xl mx-auto md:mt-6">
               <p className="mb-6">
-                While I am not actively seeking new job opportunities at the
-                moment, I am always open to connecting with like-minded
-                individuals in the tech community.
+                I am always open to connecting with like-minded individuals in
+                the tech community. Whether you have questions about my work or
+                simply want to connect and network, feel free to reach out to
+                me.
               </p>
               <p className="mb-4">
-                Whether you have questions about my work or simply want to
-                connect and network, feel free to reach out to me. I would be
-                happy to hear from you.
+                I look forward to exploring new opportunities, sharing ideas,
+                and growing my professional network, and I would be happy to
+                hear from you!
               </p>
               <div className="flex gap-4">
                 {socialData.map(({ icon, label, href }) => (
