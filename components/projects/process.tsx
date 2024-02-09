@@ -42,14 +42,16 @@ const Process = ({ body, list }: ProcessProps) => {
             <h2 className="mb-2 lg:mb-8">The Process</h2>
           </Fade>
           <div className="flex flex-col lg:flex-row gap-8 lg:gap-32">
-            <Fade>
-              <div className="text-block max-w-prose">
-                {documentToReactComponents(body)}
-              </div>
-            </Fade>
+            <div className="flex-1">
+              <Fade>
+                <div className="text-block max-w-prose">
+                  {documentToReactComponents(body)}
+                </div>
+              </Fade>
+            </div>
 
             <motion.ul
-              className="max-w-prose"
+              className="max-w-prose flex-1"
               variants={containerVariants}
               initial="hidden"
               whileInView="visible"
