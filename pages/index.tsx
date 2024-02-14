@@ -12,7 +12,7 @@ import ReactIcon from "@components/icons/reactIcon";
 import StylesIcon from "@components/icons/stylesIcon";
 import GitIcon from "@components/icons/gitIcon";
 import FigmaIcon from "@components/icons/figmaIcon";
-import FramerIcon from "@components/icons/framerIcon";
+import TypeScriptIcon from "@components/icons/typeScriptIcon";
 
 import { TypeCase_study, TypeCase_studyFields } from "types/contentfulModels";
 
@@ -23,7 +23,7 @@ const Home = ({ projects }: { projects: TypeCase_study[] }) => {
 
       <Hero
         title="Crafting Engaging Digital Experiences"
-        description="I am a front-end developer specializing in building web apps and static sites with React. I love delivering clean, intuitive designs that enhance user experience."
+        description="I am a full-stack developer specializing in building web apps and sites with React and TypeScript. I love delivering clean, intuitive designs that enhance user experience."
         buttonText="See My Work"
         buttonHref="/#work"
         linkText="Contact"
@@ -49,16 +49,16 @@ const Home = ({ projects }: { projects: TypeCase_study[] }) => {
             text: "React for building dynamic web apps and enhanced static sites and blogs",
           },
           {
+            icon: <TypeScriptIcon />,
+            text: "TypeScript for strong typing and scalable full-stack development",
+          },
+          {
             icon: <StylesIcon />,
             text: "SCSS modules or Tailwind for maintainable, modern styling",
           },
           {
             icon: <GitIcon />,
             text: "Git and Github for version control and seamless collaboration",
-          },
-          {
-            icon: <FramerIcon />,
-            text: "Framer Motion for smooth animations and an elevated user experience",
           },
           {
             icon: <FigmaIcon />,
